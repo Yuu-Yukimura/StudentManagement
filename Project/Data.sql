@@ -12,8 +12,8 @@ GO
 -- TẠO BẢNG
 -- 1.bảng nhân viên 
 -- 2.bảng tài khoản
--- 3.bảng công nợ
--- 4.bảng sinh viên
+-- 3.bảng sinh viên
+-- 4.bảng công nợ
 -- 5.bảng chi tiết nợ
 -- 6.bảng môn học
 -- 7.bảng lớp
