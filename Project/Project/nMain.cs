@@ -47,15 +47,15 @@ namespace Project
                 logo.Size = new Size(50, 25);
                 labelName.Visible = false;
                 panelsideMenu.Width = 50;
-                btnInfoApplication.Location = new Point(12, 425);
+                btnInfoApplication.Location = new Point(227, 523);
             }
             else
             {
                 logo.Location = new Point(48, 39);
-                logo.Size = new Size(100,50);
+                logo.Size = new Size(100, 50);
                 labelName.Visible = true;
-                panelsideMenu.Width = 200;
-                btnInfoApplication.Location = new Point(170, 425);
+                panelsideMenu.Width = 267;
+                btnInfoApplication.Location = new Point(227, 523);
             }
         }
 

@@ -120,27 +120,10 @@
   <metadata name="menuStripLogin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>297, 17</value>
   </metadata>
+  <metadata name="menuStripLogin.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>297, 17</value>
+  </metadata>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="btnChangePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAQVJREFUWEft
-        VL0KwjAY7EsI6uLjCOKkFErboY9RB8HdF3Kt76FI0VUcBNFF7yvXQVIVIV+bIQcHySXkLl9+Ag8PJ5Ak
-        ybML0t6hAOyqw/0AaE/BPbiL43hC2ab+M0BZa+CBsk290tg1BbSPtQaWlG3qlcauKaAtpTuBx4aS2tC/
-        B9CGuwHaJu0dCODxL9I0naOEW/BMFnhmMymrkNN0APN1bfSJnGofWFw+FjF5gDl2PRKivaCmHqCgSU6p
-        8QVxyD6w+FUMcAwDSt0EyLKsT6ldwNw4glYB47dLGIZhL4qiIY5kif5dxnApx5yuA5itGMKgjHGaLvjp
-        yEd0Ay/gRn3nHjoIghdgQzRulDCaxQAAAABJRU5ErkJggg==
-</value>
-  </data>
-  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAPpJREFUWEft
-        lE0KwjAQhXsFEQV/Fq68gUcplP5dw61Lr+TStYIogj8bj6Iv5QW0VE0yRVzMB7NIh/fyEiaNFOUdWZbd
-        2yzautNkIinauhMsrKEBNECe58ufB4BuhtqWZTkya4RYVA0fhAHW1B+Loujzsx+SAHEc93DqvdGnaXpJ
-        kmTIljuSAAZs3EFt6HNGoAFbbnwKYE5k+x61w0x0afEdK+TyhcAAfrdghVx6A+0YdaXPwcwFW25QGBQA
-        NzSB9ha8uUESADr7DE/ew2eRBMCwTaFd2ZPjNcyrhg+SAM+Yv2CQT1sBgn00wN8EaKto606TiaRoqyg1
-        ougBAfmTr0LUqg0AAAAASUVORK5CYII=
-</value>
-  </data>
   <data name="loginToolStripMenuItem.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAGAAAABgCAYAAADimHc4AAAABGdBTUEAALGPC/xhBQAAB0lJREFUeF7t
@@ -176,6 +159,26 @@
         AadedJyMlNh286QpNqlAL8gkPeDUp46TkSbLpOGgA+7wxGPaIJP0gFPee/EEMVQmDYdt3PXFhHplkh5w
         yvtDHMz/G3Zpr+3g05QFMaH0PU2PU94pKB3QsE8dNuXvSQQCgUAgEAgEAoFAIBAIBAKBQCB7DBjwP7nR
         7MobyGhCAAAAAElFTkSuQmCC
+</value>
+  </data>
+  <data name="btnChangePassword.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAQVJREFUWEft
+        VL0KwjAY7EsI6uLjCOKkFErboY9RB8HdF3Kt76FI0VUcBNFF7yvXQVIVIV+bIQcHySXkLl9+Ag8PJ5Ak
+        ybML0t6hAOyqw/0AaE/BPbiL43hC2ab+M0BZa+CBsk290tg1BbSPtQaWlG3qlcauKaAtpTuBx4aS2tC/
+        B9CGuwHaJu0dCODxL9I0naOEW/BMFnhmMymrkNN0APN1bfSJnGofWFw+FjF5gDl2PRKivaCmHqCgSU6p
+        8QVxyD6w+FUMcAwDSt0EyLKsT6ldwNw4glYB47dLGIZhL4qiIY5kif5dxnApx5yuA5itGMKgjHGaLvjp
+        yEd0Ay/gRn3nHjoIghdgQzRulDCaxQAAAABJRU5ErkJggg==
+</value>
+  </data>
+  <data name="btnLogout.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+    <value>
+        iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAABGdBTUEAALGPC/xhBQAAAPpJREFUWEft
+        lE0KwjAQhXsFEQV/Fq68gUcplP5dw61Lr+TStYIogj8bj6Iv5QW0VE0yRVzMB7NIh/fyEiaNFOUdWZbd
+        2yzautNkIinauhMsrKEBNECe58ufB4BuhtqWZTkya4RYVA0fhAHW1B+Loujzsx+SAHEc93DqvdGnaXpJ
+        kmTIljuSAAZs3EFt6HNGoAFbbnwKYE5k+x61w0x0afEdK+TyhcAAfrdghVx6A+0YdaXPwcwFW25QGBQA
+        NzSB9ha8uUESADr7DE/ew2eRBMCwTaFd2ZPjNcyrhg+SAM+Yv2CQT1sBgn00wN8EaKto606TiaRoqyg1
+        ougBAfmTr0LUqg0AAAAASUVORK5CYII=
 </value>
   </data>
   <data name="btnMinimize.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
