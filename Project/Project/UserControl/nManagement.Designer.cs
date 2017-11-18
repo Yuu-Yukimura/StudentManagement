@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nManagement));
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
+            this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txbNameStudent = new System.Windows.Forms.TextBox();
             this.txbIDStudent = new System.Windows.Forms.TextBox();
@@ -38,11 +39,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.pbxAvatarStudent = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.btnSearchStudent = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnSearchStudent = new System.Windows.Forms.Button();
             this.txbSearchStudent = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
             this.lvStudent = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.panel9 = new System.Windows.Forms.Panel();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txbNameStaff = new System.Windows.Forms.TextBox();
             this.txbIDStaff = new System.Windows.Forms.TextBox();
@@ -50,7 +52,6 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbxAvatarStaff = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
-            this.btnSearchStaff = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txbSearchStaff = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
             this.lvStaff = new System.Windows.Forms.ListView();
@@ -66,15 +67,12 @@
             this.txbIDSubject = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
-            this.btnAddSubject = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEditSunject = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnDeleteSubject = new Bunifu.Framework.UI.BunifuFlatButton();
             this.panel11 = new System.Windows.Forms.Panel();
-            this.btnSearchSubject = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txbSearchSubject = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lvSubject = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
+            this.panel14 = new System.Windows.Forms.Panel();
             this.panel22 = new System.Windows.Forms.Panel();
             this.txbStatusClass = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -91,29 +89,33 @@
             this.txbIDClass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
-            this.btnSearchClass = new Bunifu.Framework.UI.BunifuFlatButton();
             this.txbSearchClass = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lvClass = new System.Windows.Forms.ListView();
-            this.panel14 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton3 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel9 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton4 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton5 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton6 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.bunifuFlatButton7 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton8 = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.bunifuFlatButton9 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
+            this.btnViewStudent = new System.Windows.Forms.Button();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.btnViewStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
+            this.btnAddSubject = new System.Windows.Forms.Button();
+            this.btnEditSubject = new System.Windows.Forms.Button();
+            this.btnDeleteSubject = new System.Windows.Forms.Button();
+            this.btnAddClass = new System.Windows.Forms.Button();
+            this.btnViewClass = new System.Windows.Forms.Button();
+            this.btnDeleteClass = new System.Windows.Forms.Button();
+            this.btnSearchStaff = new System.Windows.Forms.Button();
+            this.btnSearchSubject = new System.Windows.Forms.Button();
+            this.btnSearchClass = new System.Windows.Forms.Button();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
+            this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStudent)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
             this.tabPage2.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStaff)).BeginInit();
             this.panel8.SuspendLayout();
@@ -127,6 +129,7 @@
             this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
             this.tabPage4.SuspendLayout();
+            this.panel14.SuspendLayout();
             this.panel22.SuspendLayout();
             this.panel21.SuspendLayout();
             this.panel20.SuspendLayout();
@@ -134,9 +137,6 @@
             this.panel18.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
-            this.panel14.SuspendLayout();
-            this.panel9.SuspendLayout();
-            this.panel3.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -170,6 +170,17 @@
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "Sinh viên";
             this.tabPage1.UseVisualStyleBackColor = true;
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.btnAddStudent);
+            this.panel3.Controls.Add(this.btnViewStudent);
+            this.panel3.Controls.Add(this.btnDeleteStudent);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel3.Location = new System.Drawing.Point(444, 436);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(348, 75);
+            this.panel3.TabIndex = 5;
             // 
             // panel4
             // 
@@ -241,38 +252,13 @@
             // 
             // btnSearchStudent
             // 
-            this.btnSearchStudent.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnSearchStudent.BackColor = System.Drawing.Color.Silver;
-            this.btnSearchStudent.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchStudent.BorderRadius = 0;
-            this.btnSearchStudent.ButtonText = "Tìm";
-            this.btnSearchStudent.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchStudent.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearchStudent.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearchStudent.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearchStudent.Iconimage")));
-            this.btnSearchStudent.Iconimage_right = null;
-            this.btnSearchStudent.Iconimage_right_Selected = null;
-            this.btnSearchStudent.Iconimage_Selected = null;
-            this.btnSearchStudent.IconMarginLeft = 0;
-            this.btnSearchStudent.IconMarginRight = 0;
-            this.btnSearchStudent.IconRightVisible = false;
-            this.btnSearchStudent.IconRightZoom = 0D;
-            this.btnSearchStudent.IconVisible = false;
-            this.btnSearchStudent.IconZoom = 50D;
-            this.btnSearchStudent.IsTab = false;
-            this.btnSearchStudent.Location = new System.Drawing.Point(227, 9);
-            this.btnSearchStudent.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
+            this.btnSearchStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchStudent.Location = new System.Drawing.Point(217, 11);
             this.btnSearchStudent.Name = "btnSearchStudent";
-            this.btnSearchStudent.Normalcolor = System.Drawing.Color.Silver;
-            this.btnSearchStudent.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnSearchStudent.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchStudent.selected = false;
-            this.btnSearchStudent.Size = new System.Drawing.Size(112, 48);
-            this.btnSearchStudent.TabIndex = 32;
+            this.btnSearchStudent.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchStudent.TabIndex = 33;
             this.btnSearchStudent.Text = "Tìm";
-            this.btnSearchStudent.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearchStudent.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchStudent.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearchStudent.UseVisualStyleBackColor = false;
             // 
             // txbSearchStudent
             // 
@@ -316,6 +302,17 @@
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "Nhân viên";
             this.tabPage2.UseVisualStyleBackColor = true;
+            // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.btnAddStaff);
+            this.panel9.Controls.Add(this.btnViewStaff);
+            this.panel9.Controls.Add(this.btnDeleteStaff);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(444, 436);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(348, 75);
+            this.panel9.TabIndex = 6;
             // 
             // panel10
             // 
@@ -384,41 +381,6 @@
             this.panel8.Name = "panel8";
             this.panel8.Size = new System.Drawing.Size(348, 63);
             this.panel8.TabIndex = 2;
-            // 
-            // btnSearchStaff
-            // 
-            this.btnSearchStaff.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnSearchStaff.BackColor = System.Drawing.Color.Silver;
-            this.btnSearchStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchStaff.BorderRadius = 0;
-            this.btnSearchStaff.ButtonText = "Tìm";
-            this.btnSearchStaff.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchStaff.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearchStaff.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearchStaff.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearchStaff.Iconimage")));
-            this.btnSearchStaff.Iconimage_right = null;
-            this.btnSearchStaff.Iconimage_right_Selected = null;
-            this.btnSearchStaff.Iconimage_Selected = null;
-            this.btnSearchStaff.IconMarginLeft = 0;
-            this.btnSearchStaff.IconMarginRight = 0;
-            this.btnSearchStaff.IconRightVisible = false;
-            this.btnSearchStaff.IconRightZoom = 0D;
-            this.btnSearchStaff.IconVisible = false;
-            this.btnSearchStaff.IconZoom = 50D;
-            this.btnSearchStaff.IsTab = false;
-            this.btnSearchStaff.Location = new System.Drawing.Point(227, 9);
-            this.btnSearchStaff.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.btnSearchStaff.Name = "btnSearchStaff";
-            this.btnSearchStaff.Normalcolor = System.Drawing.Color.Silver;
-            this.btnSearchStaff.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnSearchStaff.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchStaff.selected = false;
-            this.btnSearchStaff.Size = new System.Drawing.Size(112, 45);
-            this.btnSearchStaff.TabIndex = 32;
-            this.btnSearchStaff.Text = "Tìm";
-            this.btnSearchStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearchStaff.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchStaff.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txbSearchStaff
             // 
@@ -555,118 +517,13 @@
             // panel13
             // 
             this.panel13.Controls.Add(this.btnAddSubject);
-            this.panel13.Controls.Add(this.btnEditSunject);
+            this.panel13.Controls.Add(this.btnEditSubject);
             this.panel13.Controls.Add(this.btnDeleteSubject);
             this.panel13.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panel13.Location = new System.Drawing.Point(440, 440);
             this.panel13.Name = "panel13";
             this.panel13.Size = new System.Drawing.Size(356, 75);
             this.panel13.TabIndex = 3;
-            // 
-            // btnAddSubject
-            // 
-            this.btnAddSubject.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnAddSubject.BackColor = System.Drawing.Color.Silver;
-            this.btnAddSubject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnAddSubject.BorderRadius = 0;
-            this.btnAddSubject.ButtonText = "Thêm";
-            this.btnAddSubject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAddSubject.DisabledColor = System.Drawing.Color.Gray;
-            this.btnAddSubject.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnAddSubject.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnAddSubject.Iconimage")));
-            this.btnAddSubject.Iconimage_right = null;
-            this.btnAddSubject.Iconimage_right_Selected = null;
-            this.btnAddSubject.Iconimage_Selected = null;
-            this.btnAddSubject.IconMarginLeft = 0;
-            this.btnAddSubject.IconMarginRight = 0;
-            this.btnAddSubject.IconRightVisible = false;
-            this.btnAddSubject.IconRightZoom = 0D;
-            this.btnAddSubject.IconVisible = false;
-            this.btnAddSubject.IconZoom = 50D;
-            this.btnAddSubject.IsTab = false;
-            this.btnAddSubject.Location = new System.Drawing.Point(13, 11);
-            this.btnAddSubject.Margin = new System.Windows.Forms.Padding(26, 86, 26, 86);
-            this.btnAddSubject.Name = "btnAddSubject";
-            this.btnAddSubject.Normalcolor = System.Drawing.Color.Silver;
-            this.btnAddSubject.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnAddSubject.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnAddSubject.selected = false;
-            this.btnAddSubject.Size = new System.Drawing.Size(110, 50);
-            this.btnAddSubject.TabIndex = 32;
-            this.btnAddSubject.Text = "Thêm";
-            this.btnAddSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnAddSubject.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnAddSubject.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnEditSunject
-            // 
-            this.btnEditSunject.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnEditSunject.BackColor = System.Drawing.Color.Silver;
-            this.btnEditSunject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEditSunject.BorderRadius = 0;
-            this.btnEditSunject.ButtonText = "Sửa";
-            this.btnEditSunject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEditSunject.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEditSunject.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEditSunject.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEditSunject.Iconimage")));
-            this.btnEditSunject.Iconimage_right = null;
-            this.btnEditSunject.Iconimage_right_Selected = null;
-            this.btnEditSunject.Iconimage_Selected = null;
-            this.btnEditSunject.IconMarginLeft = 0;
-            this.btnEditSunject.IconMarginRight = 0;
-            this.btnEditSunject.IconRightVisible = false;
-            this.btnEditSunject.IconRightZoom = 0D;
-            this.btnEditSunject.IconVisible = false;
-            this.btnEditSunject.IconZoom = 50D;
-            this.btnEditSunject.IsTab = false;
-            this.btnEditSunject.Location = new System.Drawing.Point(126, 11);
-            this.btnEditSunject.Margin = new System.Windows.Forms.Padding(19, 49, 19, 49);
-            this.btnEditSunject.Name = "btnEditSunject";
-            this.btnEditSunject.Normalcolor = System.Drawing.Color.Silver;
-            this.btnEditSunject.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnEditSunject.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnEditSunject.selected = false;
-            this.btnEditSunject.Size = new System.Drawing.Size(110, 50);
-            this.btnEditSunject.TabIndex = 32;
-            this.btnEditSunject.Text = "Sửa";
-            this.btnEditSunject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEditSunject.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnEditSunject.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnDeleteSubject
-            // 
-            this.btnDeleteSubject.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnDeleteSubject.BackColor = System.Drawing.Color.Silver;
-            this.btnDeleteSubject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnDeleteSubject.BorderRadius = 0;
-            this.btnDeleteSubject.ButtonText = "Xóa";
-            this.btnDeleteSubject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnDeleteSubject.DisabledColor = System.Drawing.Color.Gray;
-            this.btnDeleteSubject.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnDeleteSubject.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnDeleteSubject.Iconimage")));
-            this.btnDeleteSubject.Iconimage_right = null;
-            this.btnDeleteSubject.Iconimage_right_Selected = null;
-            this.btnDeleteSubject.Iconimage_Selected = null;
-            this.btnDeleteSubject.IconMarginLeft = 0;
-            this.btnDeleteSubject.IconMarginRight = 0;
-            this.btnDeleteSubject.IconRightVisible = false;
-            this.btnDeleteSubject.IconRightZoom = 0D;
-            this.btnDeleteSubject.IconVisible = false;
-            this.btnDeleteSubject.IconZoom = 50D;
-            this.btnDeleteSubject.IsTab = false;
-            this.btnDeleteSubject.Location = new System.Drawing.Point(239, 11);
-            this.btnDeleteSubject.Margin = new System.Windows.Forms.Padding(14, 28, 14, 28);
-            this.btnDeleteSubject.Name = "btnDeleteSubject";
-            this.btnDeleteSubject.Normalcolor = System.Drawing.Color.Silver;
-            this.btnDeleteSubject.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnDeleteSubject.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnDeleteSubject.selected = false;
-            this.btnDeleteSubject.Size = new System.Drawing.Size(110, 50);
-            this.btnDeleteSubject.TabIndex = 32;
-            this.btnDeleteSubject.Text = "Xóa";
-            this.btnDeleteSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnDeleteSubject.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnDeleteSubject.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // panel11
             // 
@@ -677,41 +534,6 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(356, 63);
             this.panel11.TabIndex = 2;
-            // 
-            // btnSearchSubject
-            // 
-            this.btnSearchSubject.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnSearchSubject.BackColor = System.Drawing.Color.Silver;
-            this.btnSearchSubject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchSubject.BorderRadius = 0;
-            this.btnSearchSubject.ButtonText = "Tìm";
-            this.btnSearchSubject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchSubject.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearchSubject.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearchSubject.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearchSubject.Iconimage")));
-            this.btnSearchSubject.Iconimage_right = null;
-            this.btnSearchSubject.Iconimage_right_Selected = null;
-            this.btnSearchSubject.Iconimage_Selected = null;
-            this.btnSearchSubject.IconMarginLeft = 0;
-            this.btnSearchSubject.IconMarginRight = 0;
-            this.btnSearchSubject.IconRightVisible = false;
-            this.btnSearchSubject.IconRightZoom = 0D;
-            this.btnSearchSubject.IconVisible = false;
-            this.btnSearchSubject.IconZoom = 50D;
-            this.btnSearchSubject.IsTab = false;
-            this.btnSearchSubject.Location = new System.Drawing.Point(227, 9);
-            this.btnSearchSubject.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.btnSearchSubject.Name = "btnSearchSubject";
-            this.btnSearchSubject.Normalcolor = System.Drawing.Color.Silver;
-            this.btnSearchSubject.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnSearchSubject.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchSubject.selected = false;
-            this.btnSearchSubject.Size = new System.Drawing.Size(122, 45);
-            this.btnSearchSubject.TabIndex = 32;
-            this.btnSearchSubject.Text = "Tìm";
-            this.btnSearchSubject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearchSubject.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchSubject.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             // 
             // txbSearchSubject
             // 
@@ -757,6 +579,17 @@
             this.tabPage4.TabIndex = 3;
             this.tabPage4.Text = "Lớp học";
             this.tabPage4.UseVisualStyleBackColor = true;
+            // 
+            // panel14
+            // 
+            this.panel14.Controls.Add(this.btnAddClass);
+            this.panel14.Controls.Add(this.btnViewClass);
+            this.panel14.Controls.Add(this.btnDeleteClass);
+            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel14.Location = new System.Drawing.Point(443, 437);
+            this.panel14.Name = "panel14";
+            this.panel14.Size = new System.Drawing.Size(350, 75);
+            this.panel14.TabIndex = 9;
             // 
             // panel22
             // 
@@ -903,41 +736,6 @@
             this.panel12.Size = new System.Drawing.Size(350, 63);
             this.panel12.TabIndex = 2;
             // 
-            // btnSearchClass
-            // 
-            this.btnSearchClass.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnSearchClass.BackColor = System.Drawing.Color.Silver;
-            this.btnSearchClass.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnSearchClass.BorderRadius = 0;
-            this.btnSearchClass.ButtonText = "Tìm";
-            this.btnSearchClass.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnSearchClass.DisabledColor = System.Drawing.Color.Gray;
-            this.btnSearchClass.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnSearchClass.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnSearchClass.Iconimage")));
-            this.btnSearchClass.Iconimage_right = null;
-            this.btnSearchClass.Iconimage_right_Selected = null;
-            this.btnSearchClass.Iconimage_Selected = null;
-            this.btnSearchClass.IconMarginLeft = 0;
-            this.btnSearchClass.IconMarginRight = 0;
-            this.btnSearchClass.IconRightVisible = false;
-            this.btnSearchClass.IconRightZoom = 0D;
-            this.btnSearchClass.IconVisible = false;
-            this.btnSearchClass.IconZoom = 50D;
-            this.btnSearchClass.IsTab = false;
-            this.btnSearchClass.Location = new System.Drawing.Point(227, 9);
-            this.btnSearchClass.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
-            this.btnSearchClass.Name = "btnSearchClass";
-            this.btnSearchClass.Normalcolor = System.Drawing.Color.Silver;
-            this.btnSearchClass.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnSearchClass.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchClass.selected = false;
-            this.btnSearchClass.Size = new System.Drawing.Size(112, 45);
-            this.btnSearchClass.TabIndex = 32;
-            this.btnSearchClass.Text = "Tìm";
-            this.btnSearchClass.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnSearchClass.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnSearchClass.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
             // txbSearchClass
             // 
             this.txbSearchClass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -965,353 +763,155 @@
             this.lvClass.TabIndex = 0;
             this.lvClass.UseCompatibleStateImageBehavior = false;
             // 
-            // panel14
+            // btnDeleteStudent
             // 
-            this.panel14.Controls.Add(this.bunifuFlatButton1);
-            this.panel14.Controls.Add(this.bunifuFlatButton2);
-            this.panel14.Controls.Add(this.bunifuFlatButton3);
-            this.panel14.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel14.Location = new System.Drawing.Point(443, 437);
-            this.panel14.Name = "panel14";
-            this.panel14.Size = new System.Drawing.Size(350, 75);
-            this.panel14.TabIndex = 9;
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(238, 11);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteStudent.TabIndex = 34;
+            this.btnDeleteStudent.Text = "Xóa";
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton1
+            // btnViewStudent
             // 
-            this.bunifuFlatButton1.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton1.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Thêm";
-            this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton1.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton1.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton1.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton1.Iconimage")));
-            this.bunifuFlatButton1.Iconimage_right = null;
-            this.bunifuFlatButton1.Iconimage_right_Selected = null;
-            this.bunifuFlatButton1.Iconimage_Selected = null;
-            this.bunifuFlatButton1.IconMarginLeft = 0;
-            this.bunifuFlatButton1.IconMarginRight = 0;
-            this.bunifuFlatButton1.IconRightVisible = false;
-            this.bunifuFlatButton1.IconRightZoom = 0D;
-            this.bunifuFlatButton1.IconVisible = false;
-            this.bunifuFlatButton1.IconZoom = 50D;
-            this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(13, 11);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(26, 86, 26, 86);
-            this.bunifuFlatButton1.Name = "bunifuFlatButton1";
-            this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton1.selected = false;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton1.TabIndex = 32;
-            this.bunifuFlatButton1.Text = "Thêm";
-            this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnViewStudent.Location = new System.Drawing.Point(122, 11);
+            this.btnViewStudent.Name = "btnViewStudent";
+            this.btnViewStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnViewStudent.TabIndex = 34;
+            this.btnViewStudent.Text = "Xem";
+            this.btnViewStudent.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton2
+            // btnAddStudent
             // 
-            this.bunifuFlatButton2.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton2.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton2.BorderRadius = 0;
-            this.bunifuFlatButton2.ButtonText = "Sửa";
-            this.bunifuFlatButton2.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton2.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton2.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton2.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton2.Iconimage")));
-            this.bunifuFlatButton2.Iconimage_right = null;
-            this.bunifuFlatButton2.Iconimage_right_Selected = null;
-            this.bunifuFlatButton2.Iconimage_Selected = null;
-            this.bunifuFlatButton2.IconMarginLeft = 0;
-            this.bunifuFlatButton2.IconMarginRight = 0;
-            this.bunifuFlatButton2.IconRightVisible = false;
-            this.bunifuFlatButton2.IconRightZoom = 0D;
-            this.bunifuFlatButton2.IconVisible = false;
-            this.bunifuFlatButton2.IconZoom = 50D;
-            this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(126, 11);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(19, 49, 19, 49);
-            this.bunifuFlatButton2.Name = "bunifuFlatButton2";
-            this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton2.selected = false;
-            this.bunifuFlatButton2.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton2.TabIndex = 32;
-            this.bunifuFlatButton2.Text = "Sửa";
-            this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnAddStudent.Location = new System.Drawing.Point(6, 11);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnAddStudent.TabIndex = 34;
+            this.btnAddStudent.Text = "Thêm";
+            this.btnAddStudent.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton3
+            // btnAddStaff
             // 
-            this.bunifuFlatButton3.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton3.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton3.BorderRadius = 0;
-            this.bunifuFlatButton3.ButtonText = "Xóa";
-            this.bunifuFlatButton3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton3.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton3.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton3.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton3.Iconimage")));
-            this.bunifuFlatButton3.Iconimage_right = null;
-            this.bunifuFlatButton3.Iconimage_right_Selected = null;
-            this.bunifuFlatButton3.Iconimage_Selected = null;
-            this.bunifuFlatButton3.IconMarginLeft = 0;
-            this.bunifuFlatButton3.IconMarginRight = 0;
-            this.bunifuFlatButton3.IconRightVisible = false;
-            this.bunifuFlatButton3.IconRightZoom = 0D;
-            this.bunifuFlatButton3.IconVisible = false;
-            this.bunifuFlatButton3.IconZoom = 50D;
-            this.bunifuFlatButton3.IsTab = false;
-            this.bunifuFlatButton3.Location = new System.Drawing.Point(239, 11);
-            this.bunifuFlatButton3.Margin = new System.Windows.Forms.Padding(14, 28, 14, 28);
-            this.bunifuFlatButton3.Name = "bunifuFlatButton3";
-            this.bunifuFlatButton3.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton3.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton3.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton3.selected = false;
-            this.bunifuFlatButton3.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton3.TabIndex = 32;
-            this.bunifuFlatButton3.Text = "Xóa";
-            this.bunifuFlatButton3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton3.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton3.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnAddStaff.Location = new System.Drawing.Point(3, 12);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnAddStaff.TabIndex = 35;
+            this.btnAddStaff.Text = "Thêm";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
             // 
-            // panel9
+            // btnViewStaff
             // 
-            this.panel9.Controls.Add(this.bunifuFlatButton4);
-            this.panel9.Controls.Add(this.bunifuFlatButton5);
-            this.panel9.Controls.Add(this.bunifuFlatButton6);
-            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel9.Location = new System.Drawing.Point(444, 436);
-            this.panel9.Name = "panel9";
-            this.panel9.Size = new System.Drawing.Size(348, 75);
-            this.panel9.TabIndex = 6;
+            this.btnViewStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnViewStaff.Location = new System.Drawing.Point(119, 12);
+            this.btnViewStaff.Name = "btnViewStaff";
+            this.btnViewStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnViewStaff.TabIndex = 36;
+            this.btnViewStaff.Text = "Xem";
+            this.btnViewStaff.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton4
+            // btnDeleteStaff
             // 
-            this.bunifuFlatButton4.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton4.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton4.BorderRadius = 0;
-            this.bunifuFlatButton4.ButtonText = "Thêm";
-            this.bunifuFlatButton4.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton4.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton4.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton4.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton4.Iconimage")));
-            this.bunifuFlatButton4.Iconimage_right = null;
-            this.bunifuFlatButton4.Iconimage_right_Selected = null;
-            this.bunifuFlatButton4.Iconimage_Selected = null;
-            this.bunifuFlatButton4.IconMarginLeft = 0;
-            this.bunifuFlatButton4.IconMarginRight = 0;
-            this.bunifuFlatButton4.IconRightVisible = false;
-            this.bunifuFlatButton4.IconRightZoom = 0D;
-            this.bunifuFlatButton4.IconVisible = false;
-            this.bunifuFlatButton4.IconZoom = 50D;
-            this.bunifuFlatButton4.IsTab = false;
-            this.bunifuFlatButton4.Location = new System.Drawing.Point(13, 11);
-            this.bunifuFlatButton4.Margin = new System.Windows.Forms.Padding(26, 86, 26, 86);
-            this.bunifuFlatButton4.Name = "bunifuFlatButton4";
-            this.bunifuFlatButton4.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton4.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton4.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton4.selected = false;
-            this.bunifuFlatButton4.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton4.TabIndex = 32;
-            this.bunifuFlatButton4.Text = "Thêm";
-            this.bunifuFlatButton4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton4.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton4.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteStaff.Location = new System.Drawing.Point(235, 12);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteStaff.TabIndex = 37;
+            this.btnDeleteStaff.Text = "Xóa";
+            this.btnDeleteStaff.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton5
+            // btnAddSubject
             // 
-            this.bunifuFlatButton5.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton5.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton5.BorderRadius = 0;
-            this.bunifuFlatButton5.ButtonText = "Xem";
-            this.bunifuFlatButton5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton5.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton5.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton5.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton5.Iconimage")));
-            this.bunifuFlatButton5.Iconimage_right = null;
-            this.bunifuFlatButton5.Iconimage_right_Selected = null;
-            this.bunifuFlatButton5.Iconimage_Selected = null;
-            this.bunifuFlatButton5.IconMarginLeft = 0;
-            this.bunifuFlatButton5.IconMarginRight = 0;
-            this.bunifuFlatButton5.IconRightVisible = false;
-            this.bunifuFlatButton5.IconRightZoom = 0D;
-            this.bunifuFlatButton5.IconVisible = false;
-            this.bunifuFlatButton5.IconZoom = 50D;
-            this.bunifuFlatButton5.IsTab = false;
-            this.bunifuFlatButton5.Location = new System.Drawing.Point(126, 11);
-            this.bunifuFlatButton5.Margin = new System.Windows.Forms.Padding(19, 49, 19, 49);
-            this.bunifuFlatButton5.Name = "bunifuFlatButton5";
-            this.bunifuFlatButton5.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton5.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton5.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton5.selected = false;
-            this.bunifuFlatButton5.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton5.TabIndex = 32;
-            this.bunifuFlatButton5.Text = "Xem";
-            this.bunifuFlatButton5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton5.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton5.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnAddSubject.Location = new System.Drawing.Point(7, 12);
+            this.btnAddSubject.Name = "btnAddSubject";
+            this.btnAddSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnAddSubject.TabIndex = 35;
+            this.btnAddSubject.Text = "Thêm";
+            this.btnAddSubject.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton6
+            // btnEditSubject
             // 
-            this.bunifuFlatButton6.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton6.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton6.BorderRadius = 0;
-            this.bunifuFlatButton6.ButtonText = "Xóa";
-            this.bunifuFlatButton6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton6.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton6.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton6.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton6.Iconimage")));
-            this.bunifuFlatButton6.Iconimage_right = null;
-            this.bunifuFlatButton6.Iconimage_right_Selected = null;
-            this.bunifuFlatButton6.Iconimage_Selected = null;
-            this.bunifuFlatButton6.IconMarginLeft = 0;
-            this.bunifuFlatButton6.IconMarginRight = 0;
-            this.bunifuFlatButton6.IconRightVisible = false;
-            this.bunifuFlatButton6.IconRightZoom = 0D;
-            this.bunifuFlatButton6.IconVisible = false;
-            this.bunifuFlatButton6.IconZoom = 50D;
-            this.bunifuFlatButton6.IsTab = false;
-            this.bunifuFlatButton6.Location = new System.Drawing.Point(239, 11);
-            this.bunifuFlatButton6.Margin = new System.Windows.Forms.Padding(14, 28, 14, 28);
-            this.bunifuFlatButton6.Name = "bunifuFlatButton6";
-            this.bunifuFlatButton6.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton6.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton6.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton6.selected = false;
-            this.bunifuFlatButton6.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton6.TabIndex = 32;
-            this.bunifuFlatButton6.Text = "Xóa";
-            this.bunifuFlatButton6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton6.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton6.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnEditSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnEditSubject.Location = new System.Drawing.Point(123, 12);
+            this.btnEditSubject.Name = "btnEditSubject";
+            this.btnEditSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnEditSubject.TabIndex = 36;
+            this.btnEditSubject.Text = "Sửa";
+            this.btnEditSubject.UseVisualStyleBackColor = false;
             // 
-            // panel3
+            // btnDeleteSubject
             // 
-            this.panel3.Controls.Add(this.bunifuFlatButton7);
-            this.panel3.Controls.Add(this.bunifuFlatButton8);
-            this.panel3.Controls.Add(this.bunifuFlatButton9);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel3.Location = new System.Drawing.Point(444, 436);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(348, 75);
-            this.panel3.TabIndex = 5;
+            this.btnDeleteSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteSubject.Location = new System.Drawing.Point(239, 12);
+            this.btnDeleteSubject.Name = "btnDeleteSubject";
+            this.btnDeleteSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteSubject.TabIndex = 37;
+            this.btnDeleteSubject.Text = "Xóa";
+            this.btnDeleteSubject.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton7
+            // btnAddClass
             // 
-            this.bunifuFlatButton7.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton7.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton7.BorderRadius = 0;
-            this.bunifuFlatButton7.ButtonText = "Thêm";
-            this.bunifuFlatButton7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton7.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton7.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton7.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton7.Iconimage")));
-            this.bunifuFlatButton7.Iconimage_right = null;
-            this.bunifuFlatButton7.Iconimage_right_Selected = null;
-            this.bunifuFlatButton7.Iconimage_Selected = null;
-            this.bunifuFlatButton7.IconMarginLeft = 0;
-            this.bunifuFlatButton7.IconMarginRight = 0;
-            this.bunifuFlatButton7.IconRightVisible = false;
-            this.bunifuFlatButton7.IconRightZoom = 0D;
-            this.bunifuFlatButton7.IconVisible = false;
-            this.bunifuFlatButton7.IconZoom = 50D;
-            this.bunifuFlatButton7.IsTab = false;
-            this.bunifuFlatButton7.Location = new System.Drawing.Point(13, 11);
-            this.bunifuFlatButton7.Margin = new System.Windows.Forms.Padding(26, 86, 26, 86);
-            this.bunifuFlatButton7.Name = "bunifuFlatButton7";
-            this.bunifuFlatButton7.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton7.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton7.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton7.selected = false;
-            this.bunifuFlatButton7.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton7.TabIndex = 32;
-            this.bunifuFlatButton7.Text = "Thêm";
-            this.bunifuFlatButton7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton7.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton7.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAddClass.BackColor = System.Drawing.Color.Gray;
+            this.btnAddClass.Location = new System.Drawing.Point(4, 12);
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.Size = new System.Drawing.Size(110, 50);
+            this.btnAddClass.TabIndex = 35;
+            this.btnAddClass.Text = "Thêm";
+            this.btnAddClass.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton8
+            // btnViewClass
             // 
-            this.bunifuFlatButton8.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton8.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton8.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton8.BorderRadius = 0;
-            this.bunifuFlatButton8.ButtonText = "Xem";
-            this.bunifuFlatButton8.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton8.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton8.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton8.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton8.Iconimage")));
-            this.bunifuFlatButton8.Iconimage_right = null;
-            this.bunifuFlatButton8.Iconimage_right_Selected = null;
-            this.bunifuFlatButton8.Iconimage_Selected = null;
-            this.bunifuFlatButton8.IconMarginLeft = 0;
-            this.bunifuFlatButton8.IconMarginRight = 0;
-            this.bunifuFlatButton8.IconRightVisible = false;
-            this.bunifuFlatButton8.IconRightZoom = 0D;
-            this.bunifuFlatButton8.IconVisible = false;
-            this.bunifuFlatButton8.IconZoom = 50D;
-            this.bunifuFlatButton8.IsTab = false;
-            this.bunifuFlatButton8.Location = new System.Drawing.Point(126, 11);
-            this.bunifuFlatButton8.Margin = new System.Windows.Forms.Padding(19, 49, 19, 49);
-            this.bunifuFlatButton8.Name = "bunifuFlatButton8";
-            this.bunifuFlatButton8.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton8.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton8.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton8.selected = false;
-            this.bunifuFlatButton8.Size = new System.Drawing.Size(109, 50);
-            this.bunifuFlatButton8.TabIndex = 32;
-            this.bunifuFlatButton8.Text = "Xem";
-            this.bunifuFlatButton8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton8.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton8.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnViewClass.BackColor = System.Drawing.Color.Gray;
+            this.btnViewClass.Location = new System.Drawing.Point(120, 12);
+            this.btnViewClass.Name = "btnViewClass";
+            this.btnViewClass.Size = new System.Drawing.Size(110, 50);
+            this.btnViewClass.TabIndex = 36;
+            this.btnViewClass.Text = "Xem";
+            this.btnViewClass.UseVisualStyleBackColor = false;
             // 
-            // bunifuFlatButton9
+            // btnDeleteClass
             // 
-            this.bunifuFlatButton9.Activecolor = System.Drawing.Color.Gainsboro;
-            this.bunifuFlatButton9.BackColor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.bunifuFlatButton9.BorderRadius = 0;
-            this.bunifuFlatButton9.ButtonText = "Xóa";
-            this.bunifuFlatButton9.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuFlatButton9.DisabledColor = System.Drawing.Color.Gray;
-            this.bunifuFlatButton9.Iconcolor = System.Drawing.Color.Transparent;
-            this.bunifuFlatButton9.Iconimage = ((System.Drawing.Image)(resources.GetObject("bunifuFlatButton9.Iconimage")));
-            this.bunifuFlatButton9.Iconimage_right = null;
-            this.bunifuFlatButton9.Iconimage_right_Selected = null;
-            this.bunifuFlatButton9.Iconimage_Selected = null;
-            this.bunifuFlatButton9.IconMarginLeft = 0;
-            this.bunifuFlatButton9.IconMarginRight = 0;
-            this.bunifuFlatButton9.IconRightVisible = false;
-            this.bunifuFlatButton9.IconRightZoom = 0D;
-            this.bunifuFlatButton9.IconVisible = false;
-            this.bunifuFlatButton9.IconZoom = 50D;
-            this.bunifuFlatButton9.IsTab = false;
-            this.bunifuFlatButton9.Location = new System.Drawing.Point(239, 11);
-            this.bunifuFlatButton9.Margin = new System.Windows.Forms.Padding(14, 28, 14, 28);
-            this.bunifuFlatButton9.Name = "bunifuFlatButton9";
-            this.bunifuFlatButton9.Normalcolor = System.Drawing.Color.Silver;
-            this.bunifuFlatButton9.OnHovercolor = System.Drawing.Color.Empty;
-            this.bunifuFlatButton9.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton9.selected = false;
-            this.bunifuFlatButton9.Size = new System.Drawing.Size(110, 50);
-            this.bunifuFlatButton9.TabIndex = 32;
-            this.bunifuFlatButton9.Text = "Xóa";
-            this.bunifuFlatButton9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuFlatButton9.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.bunifuFlatButton9.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeleteClass.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteClass.Location = new System.Drawing.Point(236, 12);
+            this.btnDeleteClass.Name = "btnDeleteClass";
+            this.btnDeleteClass.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteClass.TabIndex = 37;
+            this.btnDeleteClass.Text = "Xóa";
+            this.btnDeleteClass.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchStaff
+            // 
+            this.btnSearchStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchStaff.Location = new System.Drawing.Point(220, 11);
+            this.btnSearchStaff.Name = "btnSearchStaff";
+            this.btnSearchStaff.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchStaff.TabIndex = 34;
+            this.btnSearchStaff.Text = "Tìm";
+            this.btnSearchStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchSubject
+            // 
+            this.btnSearchSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchSubject.Location = new System.Drawing.Point(217, 11);
+            this.btnSearchSubject.Name = "btnSearchSubject";
+            this.btnSearchSubject.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchSubject.TabIndex = 34;
+            this.btnSearchSubject.Text = "Tìm";
+            this.btnSearchSubject.UseVisualStyleBackColor = false;
+            // 
+            // btnSearchClass
+            // 
+            this.btnSearchClass.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchClass.Location = new System.Drawing.Point(217, 11);
+            this.btnSearchClass.Name = "btnSearchClass";
+            this.btnSearchClass.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchClass.TabIndex = 34;
+            this.btnSearchClass.Text = "Tìm";
+            this.btnSearchClass.UseVisualStyleBackColor = false;
             // 
             // nManagement
             // 
@@ -1323,6 +923,7 @@
             this.Size = new System.Drawing.Size(804, 556);
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
+            this.panel3.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStudent)).EndInit();
@@ -1330,6 +931,7 @@
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
+            this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
             this.panel10.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStaff)).EndInit();
@@ -1349,6 +951,7 @@
             this.panel11.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.tabPage4.ResumeLayout(false);
+            this.panel14.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
             this.panel22.PerformLayout();
             this.panel21.ResumeLayout(false);
@@ -1362,9 +965,6 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel7.ResumeLayout(false);
-            this.panel14.ResumeLayout(false);
-            this.panel9.ResumeLayout(false);
-            this.panel3.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -1379,7 +979,6 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbSearchStudent;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSearchStudent;
         private System.Windows.Forms.ListView lvStudent;
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.ListView lvStaff;
@@ -1388,7 +987,6 @@
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.ListView lvClass;
         private System.Windows.Forms.Panel panel8;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSearchStaff;
         private System.Windows.Forms.TextBox txbSearchStaff;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.TextBox txbNameStudent;
@@ -1403,10 +1001,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.PictureBox pbxAvatarStaff;
         private System.Windows.Forms.Panel panel11;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSearchSubject;
         private System.Windows.Forms.TextBox txbSearchSubject;
         private System.Windows.Forms.Panel panel12;
-        private Bunifu.Framework.UI.BunifuFlatButton btnSearchClass;
         private System.Windows.Forms.TextBox txbSearchClass;
         private System.Windows.Forms.Panel panel15;
         private System.Windows.Forms.Panel panel16;
@@ -1434,20 +1030,24 @@
         private System.Windows.Forms.TextBox txbIDClass;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Panel panel13;
-        private Bunifu.Framework.UI.BunifuFlatButton btnAddSubject;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEditSunject;
-        private Bunifu.Framework.UI.BunifuFlatButton btnDeleteSubject;
         private System.Windows.Forms.Panel panel3;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton7;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton8;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton9;
         private System.Windows.Forms.Panel panel9;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton4;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton5;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton6;
         private System.Windows.Forms.Panel panel14;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
-        private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton3;
+        private System.Windows.Forms.Button btnSearchStudent;
+        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button btnViewStudent;
+        private System.Windows.Forms.Button btnDeleteStudent;
+        private System.Windows.Forms.Button btnAddStaff;
+        private System.Windows.Forms.Button btnViewStaff;
+        private System.Windows.Forms.Button btnDeleteStaff;
+        private System.Windows.Forms.Button btnSearchStaff;
+        private System.Windows.Forms.Button btnAddSubject;
+        private System.Windows.Forms.Button btnEditSubject;
+        private System.Windows.Forms.Button btnDeleteSubject;
+        private System.Windows.Forms.Button btnSearchSubject;
+        private System.Windows.Forms.Button btnAddClass;
+        private System.Windows.Forms.Button btnViewClass;
+        private System.Windows.Forms.Button btnDeleteClass;
+        private System.Windows.Forms.Button btnSearchClass;
     }
 }
