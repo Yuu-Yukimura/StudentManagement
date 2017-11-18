@@ -108,6 +108,18 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserCtlNew\nEditAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtlNew\nEditAccount.Designer.cs">
+      <DependentUpon>nEditAccount.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtlNew\ucAddAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtlNew\ucAddAccount.Designer.cs">
+      <DependentUpon>ucAddAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserCtlNew\ucAddStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -120,11 +132,23 @@
     <Compile Include="UserCtlNew\ucAddStudent.Designer.cs">
       <DependentUpon>ucAddStudent.cs</DependentUpon>
     </Compile>
+    <Compile Include="UserCtlNew\ucEditAccount.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtlNew\ucEditAccount.Designer.cs">
+      <DependentUpon>ucEditAccount.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserCtlNew\ucEditStaff.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="UserCtlNew\ucEditStaff.Designer.cs">
       <DependentUpon>ucEditStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserCtlNew\ucViewStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserCtlNew\ucViewStaff.Designer.cs">
+      <DependentUpon>ucViewStaff.cs</DependentUpon>
     </Compile>
     <Compile Include="UserCtlNew\ucEditStudent.cs">
       <SubType>UserControl</SubType>
@@ -169,14 +193,26 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UserCtlNew\nEditAccount.resx">
+      <DependentUpon>nEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtlNew\ucAddAccount.resx">
+      <DependentUpon>ucAddAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucAddStaff.resx">
       <DependentUpon>ucAddStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucAddStudent.resx">
       <DependentUpon>ucAddStudent.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserCtlNew\ucEditAccount.resx">
+      <DependentUpon>ucEditAccount.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucEditStaff.resx">
       <DependentUpon>ucEditStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserCtlNew\ucViewStaff.resx">
+      <DependentUpon>ucViewStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucEditStudent.resx">
       <DependentUpon>ucEditStudent.cs</DependentUpon>
