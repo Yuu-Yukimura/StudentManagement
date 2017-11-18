@@ -1,6 +1,6 @@
 ﻿namespace Project.UserCtlNew
 {
-    partial class ucEditStaff
+    partial class ucAddAccount
     {
         /// <summary> 
         /// Required designer variable.
@@ -28,13 +28,14 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucEditStaff));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ucAddAccount));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.btnBack = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnEdit = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnFinish = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
             this.panel7 = new System.Windows.Forms.Panel();
             this.txbRePassWord = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -47,6 +48,7 @@
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
+            this.panel4.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
@@ -58,99 +60,8 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(805, 69);
-            this.panel1.TabIndex = 27;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnBack);
-            this.panel2.Controls.Add(this.btnEdit);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel2.Location = new System.Drawing.Point(0, 476);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(805, 81);
-            this.panel2.TabIndex = 32;
-            // 
-            // panel3
-            // 
-            this.panel3.Controls.Add(this.panel7);
-            this.panel3.Controls.Add(this.panel6);
-            this.panel3.Controls.Add(this.panel5);
-            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel3.Location = new System.Drawing.Point(0, 69);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(805, 407);
-            this.panel3.TabIndex = 33;
-            // 
-            // btnBack
-            // 
-            this.btnBack.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnBack.BackColor = System.Drawing.Color.Silver;
-            this.btnBack.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnBack.BorderRadius = 0;
-            this.btnBack.ButtonText = "Quay lại";
-            this.btnBack.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnBack.DisabledColor = System.Drawing.Color.Gray;
-            this.btnBack.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnBack.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnBack.Iconimage")));
-            this.btnBack.Iconimage_right = null;
-            this.btnBack.Iconimage_right_Selected = null;
-            this.btnBack.Iconimage_Selected = null;
-            this.btnBack.IconMarginLeft = 0;
-            this.btnBack.IconMarginRight = 0;
-            this.btnBack.IconRightVisible = true;
-            this.btnBack.IconRightZoom = 0D;
-            this.btnBack.IconVisible = true;
-            this.btnBack.IconZoom = 50D;
-            this.btnBack.IsTab = false;
-            this.btnBack.Location = new System.Drawing.Point(627, 17);
-            this.btnBack.Margin = new System.Windows.Forms.Padding(5);
-            this.btnBack.Name = "btnBack";
-            this.btnBack.Normalcolor = System.Drawing.Color.Silver;
-            this.btnBack.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnBack.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnBack.selected = false;
-            this.btnBack.Size = new System.Drawing.Size(150, 50);
-            this.btnBack.TabIndex = 22;
-            this.btnBack.Text = "Quay lại";
-            this.btnBack.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnBack.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnBack.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            // 
-            // btnEdit
-            // 
-            this.btnEdit.Activecolor = System.Drawing.Color.Gainsboro;
-            this.btnEdit.BackColor = System.Drawing.Color.Silver;
-            this.btnEdit.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnEdit.BorderRadius = 0;
-            this.btnEdit.ButtonText = "Sửa";
-            this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnEdit.DisabledColor = System.Drawing.Color.Gray;
-            this.btnEdit.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEdit.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEdit.Iconimage")));
-            this.btnEdit.Iconimage_right = null;
-            this.btnEdit.Iconimage_right_Selected = null;
-            this.btnEdit.Iconimage_Selected = null;
-            this.btnEdit.IconMarginLeft = 0;
-            this.btnEdit.IconMarginRight = 0;
-            this.btnEdit.IconRightVisible = true;
-            this.btnEdit.IconRightZoom = 0D;
-            this.btnEdit.IconVisible = true;
-            this.btnEdit.IconZoom = 50D;
-            this.btnEdit.IsTab = false;
-            this.btnEdit.Location = new System.Drawing.Point(467, 17);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(5);
-            this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Normalcolor = System.Drawing.Color.Silver;
-            this.btnEdit.OnHovercolor = System.Drawing.Color.Empty;
-            this.btnEdit.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnEdit.selected = false;
-            this.btnEdit.Size = new System.Drawing.Size(150, 50);
-            this.btnEdit.TabIndex = 21;
-            this.btnEdit.Text = "Sửa";
-            this.btnEdit.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnEdit.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
-            this.btnEdit.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.panel1.Size = new System.Drawing.Size(804, 69);
+            this.panel1.TabIndex = 30;
             // 
             // bunifuFlatButton1
             // 
@@ -158,7 +69,7 @@
             this.bunifuFlatButton1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.bunifuFlatButton1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.bunifuFlatButton1.BorderRadius = 0;
-            this.bunifuFlatButton1.ButtonText = "Sửa thông tin nhân viên";
+            this.bunifuFlatButton1.ButtonText = "Thêm tài khoản";
             this.bunifuFlatButton1.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.bunifuFlatButton1.DisabledColor = System.Drawing.SystemColors.GrayText;
             this.bunifuFlatButton1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -185,10 +96,110 @@
             this.bunifuFlatButton1.selected = true;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(792, 69);
             this.bunifuFlatButton1.TabIndex = 3;
-            this.bunifuFlatButton1.Text = "Sửa thông tin nhân viên";
+            this.bunifuFlatButton1.Text = "Thêm tài khoản";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.bunifuFlatButton1.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnFinish);
+            this.panel2.Controls.Add(this.btnCancel);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel2.Location = new System.Drawing.Point(0, 475);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(804, 81);
+            this.panel2.TabIndex = 31;
+            // 
+            // btnFinish
+            // 
+            this.btnFinish.Activecolor = System.Drawing.Color.Gainsboro;
+            this.btnFinish.BackColor = System.Drawing.Color.Silver;
+            this.btnFinish.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnFinish.BorderRadius = 0;
+            this.btnFinish.ButtonText = "Hoàn tất";
+            this.btnFinish.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnFinish.DisabledColor = System.Drawing.Color.Gray;
+            this.btnFinish.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnFinish.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnFinish.Iconimage")));
+            this.btnFinish.Iconimage_right = null;
+            this.btnFinish.Iconimage_right_Selected = null;
+            this.btnFinish.Iconimage_Selected = null;
+            this.btnFinish.IconMarginLeft = 0;
+            this.btnFinish.IconMarginRight = 0;
+            this.btnFinish.IconRightVisible = true;
+            this.btnFinish.IconRightZoom = 0D;
+            this.btnFinish.IconVisible = true;
+            this.btnFinish.IconZoom = 50D;
+            this.btnFinish.IsTab = false;
+            this.btnFinish.Location = new System.Drawing.Point(467, 17);
+            this.btnFinish.Margin = new System.Windows.Forms.Padding(5);
+            this.btnFinish.Name = "btnFinish";
+            this.btnFinish.Normalcolor = System.Drawing.Color.Silver;
+            this.btnFinish.OnHovercolor = System.Drawing.Color.Empty;
+            this.btnFinish.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnFinish.selected = false;
+            this.btnFinish.Size = new System.Drawing.Size(150, 50);
+            this.btnFinish.TabIndex = 21;
+            this.btnFinish.Text = "Hoàn tất";
+            this.btnFinish.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnFinish.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnFinish.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // btnCancel
+            // 
+            this.btnCancel.Activecolor = System.Drawing.Color.Gainsboro;
+            this.btnCancel.BackColor = System.Drawing.Color.Silver;
+            this.btnCancel.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.btnCancel.BorderRadius = 0;
+            this.btnCancel.ButtonText = "Hủy";
+            this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
+            this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
+            this.btnCancel.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCancel.Iconimage")));
+            this.btnCancel.Iconimage_right = null;
+            this.btnCancel.Iconimage_right_Selected = null;
+            this.btnCancel.Iconimage_Selected = null;
+            this.btnCancel.IconMarginLeft = 0;
+            this.btnCancel.IconMarginRight = 0;
+            this.btnCancel.IconRightVisible = true;
+            this.btnCancel.IconRightZoom = 0D;
+            this.btnCancel.IconVisible = true;
+            this.btnCancel.IconZoom = 50D;
+            this.btnCancel.IsTab = false;
+            this.btnCancel.Location = new System.Drawing.Point(627, 17);
+            this.btnCancel.Margin = new System.Windows.Forms.Padding(5);
+            this.btnCancel.Name = "btnCancel";
+            this.btnCancel.Normalcolor = System.Drawing.Color.Silver;
+            this.btnCancel.OnHovercolor = System.Drawing.Color.Empty;
+            this.btnCancel.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnCancel.selected = false;
+            this.btnCancel.Size = new System.Drawing.Size(150, 50);
+            this.btnCancel.TabIndex = 18;
+            this.btnCancel.Text = "Hủy";
+            this.btnCancel.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnCancel.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
+            this.btnCancel.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            // 
+            // panel3
+            // 
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel3.Location = new System.Drawing.Point(0, 69);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(804, 406);
+            this.panel3.TabIndex = 32;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.panel7);
+            this.panel4.Controls.Add(this.panel6);
+            this.panel4.Controls.Add(this.panel5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel4.Location = new System.Drawing.Point(0, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(804, 406);
+            this.panel4.TabIndex = 0;
             // 
             // panel7
             // 
@@ -197,8 +208,8 @@
             this.panel7.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel7.Location = new System.Drawing.Point(0, 100);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(805, 50);
-            this.panel7.TabIndex = 37;
+            this.panel7.Size = new System.Drawing.Size(804, 50);
+            this.panel7.TabIndex = 34;
             // 
             // txbRePassWord
             // 
@@ -227,8 +238,8 @@
             this.panel6.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel6.Location = new System.Drawing.Point(0, 50);
             this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(805, 50);
-            this.panel6.TabIndex = 36;
+            this.panel6.Size = new System.Drawing.Size(804, 50);
+            this.panel6.TabIndex = 33;
             // 
             // txbPassWord
             // 
@@ -257,8 +268,8 @@
             this.panel5.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel5.Location = new System.Drawing.Point(0, 0);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(805, 50);
-            this.panel5.TabIndex = 35;
+            this.panel5.Size = new System.Drawing.Size(804, 50);
+            this.panel5.TabIndex = 32;
             // 
             // txtUserName
             // 
@@ -280,18 +291,19 @@
             this.label1.TabIndex = 29;
             this.label1.Text = "Tên đẳng nhập :";
             // 
-            // ucEditStaff
+            // ucAddAccount
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
-            this.Name = "ucEditStaff";
-            this.Size = new System.Drawing.Size(805, 557);
+            this.Name = "ucAddAccount";
+            this.Size = new System.Drawing.Size(804, 556);
             this.panel1.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
+            this.panel4.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
             this.panel6.ResumeLayout(false);
@@ -307,9 +319,10 @@
         private System.Windows.Forms.Panel panel1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private System.Windows.Forms.Panel panel2;
-        private Bunifu.Framework.UI.BunifuFlatButton btnBack;
-        private Bunifu.Framework.UI.BunifuFlatButton btnEdit;
+        private Bunifu.Framework.UI.BunifuFlatButton btnFinish;
+        private Bunifu.Framework.UI.BunifuFlatButton btnCancel;
         private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.TextBox txbRePassWord;
         private System.Windows.Forms.Label label3;
