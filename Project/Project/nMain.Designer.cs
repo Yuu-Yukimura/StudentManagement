@@ -245,7 +245,7 @@
             this.btnManagement.IconVisible = true;
             this.btnManagement.IconZoom = 50D;
             this.btnManagement.IsTab = true;
-            this.btnManagement.Location = new System.Drawing.Point(0, 329);
+            this.btnManagement.Location = new System.Drawing.Point(0, 324);
             this.btnManagement.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnManagement.Name = "btnManagement";
             this.btnManagement.Normalcolor = System.Drawing.Color.White;
@@ -282,7 +282,7 @@
             this.btnList.IconVisible = true;
             this.btnList.IconZoom = 50D;
             this.btnList.IsTab = true;
-            this.btnList.Location = new System.Drawing.Point(0, 462);
+            this.btnList.Location = new System.Drawing.Point(0, 258);
             this.btnList.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnList.Name = "btnList";
             this.btnList.Normalcolor = System.Drawing.Color.White;
@@ -319,7 +319,7 @@
             this.btnDebt.IconVisible = true;
             this.btnDebt.IconZoom = 50D;
             this.btnDebt.IsTab = true;
-            this.btnDebt.Location = new System.Drawing.Point(0, 395);
+            this.btnDebt.Location = new System.Drawing.Point(0, 383);
             this.btnDebt.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnDebt.Name = "btnDebt";
             this.btnDebt.Normalcolor = System.Drawing.Color.White;
@@ -356,7 +356,7 @@
             this.btnHome.IconVisible = true;
             this.btnHome.IconZoom = 50D;
             this.btnHome.IsTab = true;
-            this.btnHome.Location = new System.Drawing.Point(0, 202);
+            this.btnHome.Location = new System.Drawing.Point(0, 193);
             this.btnHome.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnHome.Name = "btnHome";
             this.btnHome.Normalcolor = System.Drawing.Color.White;
@@ -377,7 +377,7 @@
             this.btnStaff.BackColor = System.Drawing.Color.White;
             this.btnStaff.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.btnStaff.BorderRadius = 0;
-            this.btnStaff.ButtonText = "Nhân viên";
+            this.btnStaff.ButtonText = "Thông tin nhân viên";
             this.btnStaff.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnStaff.DisabledColor = System.Drawing.Color.Gray;
             this.btnStaff.Font = new System.Drawing.Font("Segoe UI", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -393,7 +393,7 @@
             this.btnStaff.IconVisible = true;
             this.btnStaff.IconZoom = 50D;
             this.btnStaff.IsTab = true;
-            this.btnStaff.Location = new System.Drawing.Point(0, 263);
+            this.btnStaff.Location = new System.Drawing.Point(0, 444);
             this.btnStaff.Margin = new System.Windows.Forms.Padding(5, 6, 5, 6);
             this.btnStaff.Name = "btnStaff";
             this.btnStaff.Normalcolor = System.Drawing.Color.White;
@@ -402,7 +402,7 @@
             this.btnStaff.selected = false;
             this.btnStaff.Size = new System.Drawing.Size(267, 59);
             this.btnStaff.TabIndex = 1;
-            this.btnStaff.Text = "Nhân viên";
+            this.btnStaff.Text = "Thông tin nhân viên";
             this.btnStaff.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.btnStaff.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.btnStaff.TextFont = new System.Drawing.Font("Century Gothic", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -481,7 +481,6 @@
             // 
             // infoApplication
             // 
-            this.infoApplication.Dock = System.Windows.Forms.DockStyle.Fill;
             this.infoApplication.Location = new System.Drawing.Point(0, 0);
             this.infoApplication.Margin = new System.Windows.Forms.Padding(5);
             this.infoApplication.Name = "infoApplication";

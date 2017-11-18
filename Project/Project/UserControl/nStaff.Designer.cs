@@ -39,7 +39,7 @@
             this.dtpkDateOfBirth = new System.Windows.Forms.DateTimePicker();
             this.label2 = new System.Windows.Forms.Label();
             this.panel10 = new System.Windows.Forms.Panel();
-            this.cbMaritalStatu = new System.Windows.Forms.ComboBox();
+            this.cbMaritalStatus = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
             this.txbPhone = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -133,6 +133,7 @@
             // rdbMale
             // 
             this.rdbMale.AutoSize = true;
+            this.rdbMale.Checked = true;
             this.rdbMale.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.rdbMale.Location = new System.Drawing.Point(209, 9);
             this.rdbMale.Name = "rdbMale";
@@ -176,7 +177,7 @@
             // 
             // panel10
             // 
-            this.panel10.Controls.Add(this.cbMaritalStatu);
+            this.panel10.Controls.Add(this.cbMaritalStatus);
             this.panel10.Controls.Add(this.label5);
             this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel10.Location = new System.Drawing.Point(0, 350);
@@ -184,15 +185,15 @@
             this.panel10.Size = new System.Drawing.Size(518, 50);
             this.panel10.TabIndex = 36;
             // 
-            // cbMaritalStatu
+            // cbMaritalStatus
             // 
-            this.cbMaritalStatu.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.cbMaritalStatu.FormattingEnabled = true;
-            this.cbMaritalStatu.Location = new System.Drawing.Point(209, 7);
-            this.cbMaritalStatu.Margin = new System.Windows.Forms.Padding(4);
-            this.cbMaritalStatu.Name = "cbMaritalStatu";
-            this.cbMaritalStatu.Size = new System.Drawing.Size(282, 36);
-            this.cbMaritalStatu.TabIndex = 30;
+            this.cbMaritalStatus.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cbMaritalStatus.FormattingEnabled = true;
+            this.cbMaritalStatus.Location = new System.Drawing.Point(209, 7);
+            this.cbMaritalStatus.Margin = new System.Windows.Forms.Padding(4);
+            this.cbMaritalStatus.Name = "cbMaritalStatus";
+            this.cbMaritalStatus.Size = new System.Drawing.Size(282, 36);
+            this.cbMaritalStatus.TabIndex = 30;
             // 
             // label5
             // 
@@ -308,7 +309,7 @@
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(242)))), ((int)(((byte)(242)))), ((int)(((byte)(242)))));
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.bunifuFlatButton1.selected = true;
-            this.bunifuFlatButton1.Size = new System.Drawing.Size(570, 69);
+            this.bunifuFlatButton1.Size = new System.Drawing.Size(549, 69);
             this.bunifuFlatButton1.TabIndex = 3;
             this.bunifuFlatButton1.Text = "Thông tin nhân viên";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -330,9 +331,9 @@
             this.panel11.Controls.Add(this.lbType);
             this.panel11.Controls.Add(this.lbAdmin);
             this.panel11.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel11.Location = new System.Drawing.Point(577, 0);
+            this.panel11.Location = new System.Drawing.Point(556, 0);
             this.panel11.Name = "panel11";
-            this.panel11.Size = new System.Drawing.Size(227, 69);
+            this.panel11.Size = new System.Drawing.Size(248, 69);
             this.panel11.TabIndex = 4;
             // 
             // lbType
@@ -539,7 +540,7 @@
         private System.Windows.Forms.DateTimePicker dtpkDateOfBirth;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.ComboBox cbMaritalStatu;
+        private System.Windows.Forms.ComboBox cbMaritalStatus;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox txbPhone;
         private System.Windows.Forms.Label label3;

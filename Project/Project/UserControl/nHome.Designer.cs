@@ -29,9 +29,23 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nHome));
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.bunifuFlatButton1 = new Bunifu.Framework.UI.BunifuFlatButton();
             this.bunifuFlatButton2 = new Bunifu.Framework.UI.BunifuFlatButton();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
+            // 
+            // groupBox1
+            // 
+            this.groupBox1.Controls.Add(this.bunifuFlatButton1);
+            this.groupBox1.Controls.Add(this.bunifuFlatButton2);
+            this.groupBox1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.groupBox1.Location = new System.Drawing.Point(3, 3);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(291, 239);
+            this.groupBox1.TabIndex = 0;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Sinh viên";
             // 
             // bunifuFlatButton1
             // 
@@ -54,15 +68,15 @@
             this.bunifuFlatButton1.IconVisible = true;
             this.bunifuFlatButton1.IconZoom = 50D;
             this.bunifuFlatButton1.IsTab = false;
-            this.bunifuFlatButton1.Location = new System.Drawing.Point(5, 90);
-            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton1.Location = new System.Drawing.Point(10, 132);
+            this.bunifuFlatButton1.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.bunifuFlatButton1.Name = "bunifuFlatButton1";
             this.bunifuFlatButton1.Normalcolor = System.Drawing.Color.Silver;
             this.bunifuFlatButton1.OnHovercolor = System.Drawing.Color.Empty;
             this.bunifuFlatButton1.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.bunifuFlatButton1.selected = false;
             this.bunifuFlatButton1.Size = new System.Drawing.Size(250, 75);
-            this.bunifuFlatButton1.TabIndex = 23;
+            this.bunifuFlatButton1.TabIndex = 27;
             this.bunifuFlatButton1.Text = "Đăng ký môn học";
             this.bunifuFlatButton1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton1.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
@@ -89,15 +103,15 @@
             this.bunifuFlatButton2.IconVisible = true;
             this.bunifuFlatButton2.IconZoom = 50D;
             this.bunifuFlatButton2.IsTab = false;
-            this.bunifuFlatButton2.Location = new System.Drawing.Point(5, 5);
-            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuFlatButton2.Location = new System.Drawing.Point(10, 39);
+            this.bunifuFlatButton2.Margin = new System.Windows.Forms.Padding(7, 9, 7, 9);
             this.bunifuFlatButton2.Name = "bunifuFlatButton2";
             this.bunifuFlatButton2.Normalcolor = System.Drawing.Color.Silver;
             this.bunifuFlatButton2.OnHovercolor = System.Drawing.Color.Empty;
             this.bunifuFlatButton2.OnHoverTextColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
             this.bunifuFlatButton2.selected = false;
             this.bunifuFlatButton2.Size = new System.Drawing.Size(250, 75);
-            this.bunifuFlatButton2.TabIndex = 24;
+            this.bunifuFlatButton2.TabIndex = 28;
             this.bunifuFlatButton2.Text = "Thêm sinh viên";
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(42)))), ((int)(((byte)(53)))));
@@ -107,16 +121,17 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.Controls.Add(this.bunifuFlatButton1);
-            this.Controls.Add(this.bunifuFlatButton2);
+            this.Controls.Add(this.groupBox1);
             this.Name = "nHome";
             this.Size = new System.Drawing.Size(804, 557);
+            this.groupBox1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
+        private System.Windows.Forms.GroupBox groupBox1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton1;
         private Bunifu.Framework.UI.BunifuFlatButton bunifuFlatButton2;
     }

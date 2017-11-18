@@ -8,14 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Project
+namespace Project.UserCtlNew
 {
-    public partial class nStaff : UserControl
+    public partial class ucEditStudent : UserControl
     {
-        public nStaff()
+        public ucEditStudent()
         {
             InitializeComponent();
         }
-
     }
 }

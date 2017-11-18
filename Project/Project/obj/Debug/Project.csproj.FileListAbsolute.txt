@@ -64,3 +64,5 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Proj
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.nHome.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucAddStudent.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucAddStaff.resources
