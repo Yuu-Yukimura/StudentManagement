@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.DTO;
+using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
@@ -19,11 +20,25 @@ namespace Project.DAO
         private StudentDAO() { }
 
         //Hàm lấy tất cả thông tin sinh viên từ csdl
-        public DataTable LoadStudent()
+        public List<Student> LoadStudentList()
         {
-            string query = "SELECT ID,Name FROM dbo.Student ";
+            List<Student> studentList = new List<Student>();
 
-            return DataProvider.Instance.ExecuteQuery(query);
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_LoadStudentList");
+
+            foreach(DataRow item in data.Rows)
+            {
+                Student student = new Student(item);
+                studentList.Add(student);
+            }
+
+            return studentList;
+        }
+
+        //Hàm chỉ lấy Id và Name sinh viên từ csdl
+        public DataTable Load_ID_Name_Student()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT ID, Name FROM dbo.Student");
         }
 
     }

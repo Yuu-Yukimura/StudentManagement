@@ -55,7 +55,8 @@
     <Compile Include="DAO\DataProvider.cs" />
     <Compile Include="DAO\StaffDAO.cs" />
     <Compile Include="DAO\StudentDAO.cs" />
-    <Compile Include="DTO\AccountDTO.cs" />
+    <Compile Include="DTO\Staff.cs" />
+    <Compile Include="DTO\Student.cs" />
     <Compile Include="UserControl\changePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>

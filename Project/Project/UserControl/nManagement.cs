@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project.DAO;
+using Project.DTO;
 
 namespace Project
 {
@@ -18,12 +19,10 @@ namespace Project
             InitializeComponent();
 
             //Load thông tin
-            LoadStudent();
-            AddStudentBinding();
-            LoadStaff();
-            AddStaffBinding();
+            Load();
 
         }
+
 
         #region Event
 
@@ -33,10 +32,18 @@ namespace Project
 
         #region Method
 
+        private void Load()
+        {
+            LoadStudent();
+            AddStudentBinding();
+            LoadStaff();
+            AddStaffBinding();
+        }
+
         //Load thông tin sinh viên
         private void LoadStudent()
         {
-            dtgvListStudent.DataSource = StudentDAO.Instance.LoadStudent();
+            dtgvListStudent.DataSource = StudentDAO.Instance.Load_ID_Name_Student();
             //Thay đổi width cho column Name
             DataGridViewColumn columnName = dtgvListStudent.Columns[1];
             columnName.Width = 295;
@@ -52,7 +59,7 @@ namespace Project
         //Load thông tin nhân viên
         private void LoadStaff()
         {
-            dtgvListStaff.DataSource = StaffDAO.Instance.LoadStaff();
+            dtgvListStaff.DataSource = StaffDAO.Instance.Load_ID_Name_Staff();
             //Thay đổi width ch column Name
             DataGridViewColumn columnName = dtgvListStaff.Columns[1];
             columnName.Width = 295;

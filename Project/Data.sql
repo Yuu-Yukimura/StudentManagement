@@ -307,3 +307,12 @@ BEGIN
 	SELECT * FROM dbo.Account WHERE UserName = @userName AND PassWord = @passWord
 END
 GO
+
+-- Hiển thị toàn bộ danh sách sinh viên
+CREATE PROC USP_LoadStudentList
+AS SELECT * FROM dbo.Student
+GO
+-- Hiển thị toàn bộ danh sách nhân 
+CREATE PROC USP_LoadStaffList
+AS SELECT * FROM dbo.Staff
+GO
