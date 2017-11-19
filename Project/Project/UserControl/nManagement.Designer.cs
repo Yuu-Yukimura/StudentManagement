@@ -29,9 +29,16 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nManagement));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel3 = new System.Windows.Forms.Panel();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.btnViewStudent = new System.Windows.Forms.Button();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.txbNameStudent = new System.Windows.Forms.TextBox();
             this.txbIDStudent = new System.Windows.Forms.TextBox();
@@ -42,9 +49,11 @@
             this.btnSearchStudent = new System.Windows.Forms.Button();
             this.txbSearchStudent = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lvStudent = new System.Windows.Forms.ListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
+            this.btnAddStaff = new System.Windows.Forms.Button();
+            this.btnViewStaff = new System.Windows.Forms.Button();
+            this.btnDeleteStaff = new System.Windows.Forms.Button();
             this.panel10 = new System.Windows.Forms.Panel();
             this.txbNameStaff = new System.Windows.Forms.TextBox();
             this.txbIDStaff = new System.Windows.Forms.TextBox();
@@ -52,9 +61,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.pbxAvatarStaff = new System.Windows.Forms.PictureBox();
             this.panel8 = new System.Windows.Forms.Panel();
+            this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txbSearchStaff = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.lvStaff = new System.Windows.Forms.ListView();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -67,12 +76,19 @@
             this.txbIDSubject = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.panel13 = new System.Windows.Forms.Panel();
+            this.btnAddSubject = new System.Windows.Forms.Button();
+            this.btnEditSubject = new System.Windows.Forms.Button();
+            this.btnDeleteSubject = new System.Windows.Forms.Button();
             this.panel11 = new System.Windows.Forms.Panel();
+            this.btnSearchSubject = new System.Windows.Forms.Button();
             this.txbSearchSubject = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
             this.lvSubject = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
+            this.btnAddClass = new System.Windows.Forms.Button();
+            this.btnViewClass = new System.Windows.Forms.Button();
+            this.btnDeleteClass = new System.Windows.Forms.Button();
             this.panel22 = new System.Windows.Forms.Panel();
             this.txbStatusClass = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
@@ -89,24 +105,12 @@
             this.txbIDClass = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.panel12 = new System.Windows.Forms.Panel();
+            this.btnSearchClass = new System.Windows.Forms.Button();
             this.txbSearchClass = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lvClass = new System.Windows.Forms.ListView();
-            this.btnDeleteStudent = new System.Windows.Forms.Button();
-            this.btnViewStudent = new System.Windows.Forms.Button();
-            this.btnAddStudent = new System.Windows.Forms.Button();
-            this.btnAddStaff = new System.Windows.Forms.Button();
-            this.btnViewStaff = new System.Windows.Forms.Button();
-            this.btnDeleteStaff = new System.Windows.Forms.Button();
-            this.btnAddSubject = new System.Windows.Forms.Button();
-            this.btnEditSubject = new System.Windows.Forms.Button();
-            this.btnDeleteSubject = new System.Windows.Forms.Button();
-            this.btnAddClass = new System.Windows.Forms.Button();
-            this.btnViewClass = new System.Windows.Forms.Button();
-            this.btnDeleteClass = new System.Windows.Forms.Button();
-            this.btnSearchStaff = new System.Windows.Forms.Button();
-            this.btnSearchSubject = new System.Windows.Forms.Button();
-            this.btnSearchClass = new System.Windows.Forms.Button();
+            this.dtgvListStudent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
+            this.dtgvListStaff = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -137,6 +141,8 @@
             this.panel18.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -181,6 +187,36 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(348, 75);
             this.panel3.TabIndex = 5;
+            // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnAddStudent.Location = new System.Drawing.Point(6, 11);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnAddStudent.TabIndex = 34;
+            this.btnAddStudent.Text = "Thêm";
+            this.btnAddStudent.UseVisualStyleBackColor = false;
+            // 
+            // btnViewStudent
+            // 
+            this.btnViewStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnViewStudent.Location = new System.Drawing.Point(122, 11);
+            this.btnViewStudent.Name = "btnViewStudent";
+            this.btnViewStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnViewStudent.TabIndex = 34;
+            this.btnViewStudent.Text = "Xem";
+            this.btnViewStudent.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(238, 11);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteStudent.TabIndex = 34;
+            this.btnDeleteStudent.Text = "Xóa";
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
             // 
             // panel4
             // 
@@ -231,7 +267,7 @@
             // 
             // pbxAvatarStudent
             // 
-            this.pbxAvatarStudent.Image = ((System.Drawing.Image)(resources.GetObject("pbxAvatarStudent.Image")));
+            this.pbxAvatarStudent.Image = global::Project.Properties.Resources.Male;
             this.pbxAvatarStudent.Location = new System.Drawing.Point(88, 7);
             this.pbxAvatarStudent.Margin = new System.Windows.Forms.Padding(4);
             this.pbxAvatarStudent.Name = "pbxAvatarStudent";
@@ -271,21 +307,12 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.lvStudent);
+            this.panel1.Controls.Add(this.dtgvListStudent);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(4, 4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 507);
             this.panel1.TabIndex = 0;
-            // 
-            // lvStudent
-            // 
-            this.lvStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvStudent.Location = new System.Drawing.Point(0, 0);
-            this.lvStudent.Name = "lvStudent";
-            this.lvStudent.Size = new System.Drawing.Size(440, 507);
-            this.lvStudent.TabIndex = 0;
-            this.lvStudent.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage2
             // 
@@ -313,6 +340,36 @@
             this.panel9.Name = "panel9";
             this.panel9.Size = new System.Drawing.Size(348, 75);
             this.panel9.TabIndex = 6;
+            // 
+            // btnAddStaff
+            // 
+            this.btnAddStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnAddStaff.Location = new System.Drawing.Point(3, 12);
+            this.btnAddStaff.Name = "btnAddStaff";
+            this.btnAddStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnAddStaff.TabIndex = 35;
+            this.btnAddStaff.Text = "Thêm";
+            this.btnAddStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnViewStaff
+            // 
+            this.btnViewStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnViewStaff.Location = new System.Drawing.Point(119, 12);
+            this.btnViewStaff.Name = "btnViewStaff";
+            this.btnViewStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnViewStaff.TabIndex = 36;
+            this.btnViewStaff.Text = "Xem";
+            this.btnViewStaff.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteStaff
+            // 
+            this.btnDeleteStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteStaff.Location = new System.Drawing.Point(235, 12);
+            this.btnDeleteStaff.Name = "btnDeleteStaff";
+            this.btnDeleteStaff.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteStaff.TabIndex = 37;
+            this.btnDeleteStaff.Text = "Xóa";
+            this.btnDeleteStaff.UseVisualStyleBackColor = false;
             // 
             // panel10
             // 
@@ -382,6 +439,16 @@
             this.panel8.Size = new System.Drawing.Size(348, 63);
             this.panel8.TabIndex = 2;
             // 
+            // btnSearchStaff
+            // 
+            this.btnSearchStaff.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchStaff.Location = new System.Drawing.Point(220, 11);
+            this.btnSearchStaff.Name = "btnSearchStaff";
+            this.btnSearchStaff.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchStaff.TabIndex = 34;
+            this.btnSearchStaff.Text = "Tìm";
+            this.btnSearchStaff.UseVisualStyleBackColor = false;
+            // 
             // txbSearchStaff
             // 
             this.txbSearchStaff.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -393,21 +460,12 @@
             // 
             // panel5
             // 
-            this.panel5.Controls.Add(this.lvStaff);
+            this.panel5.Controls.Add(this.dtgvListStaff);
             this.panel5.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel5.Location = new System.Drawing.Point(4, 4);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(440, 507);
             this.panel5.TabIndex = 1;
-            // 
-            // lvStaff
-            // 
-            this.lvStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.lvStaff.Location = new System.Drawing.Point(0, 0);
-            this.lvStaff.Name = "lvStaff";
-            this.lvStaff.Size = new System.Drawing.Size(440, 507);
-            this.lvStaff.TabIndex = 0;
-            this.lvStaff.UseCompatibleStateImageBehavior = false;
             // 
             // tabPage3
             // 
@@ -525,6 +583,36 @@
             this.panel13.Size = new System.Drawing.Size(356, 75);
             this.panel13.TabIndex = 3;
             // 
+            // btnAddSubject
+            // 
+            this.btnAddSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnAddSubject.Location = new System.Drawing.Point(7, 12);
+            this.btnAddSubject.Name = "btnAddSubject";
+            this.btnAddSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnAddSubject.TabIndex = 35;
+            this.btnAddSubject.Text = "Thêm";
+            this.btnAddSubject.UseVisualStyleBackColor = false;
+            // 
+            // btnEditSubject
+            // 
+            this.btnEditSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnEditSubject.Location = new System.Drawing.Point(123, 12);
+            this.btnEditSubject.Name = "btnEditSubject";
+            this.btnEditSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnEditSubject.TabIndex = 36;
+            this.btnEditSubject.Text = "Sửa";
+            this.btnEditSubject.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteSubject
+            // 
+            this.btnDeleteSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteSubject.Location = new System.Drawing.Point(239, 12);
+            this.btnDeleteSubject.Name = "btnDeleteSubject";
+            this.btnDeleteSubject.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteSubject.TabIndex = 37;
+            this.btnDeleteSubject.Text = "Xóa";
+            this.btnDeleteSubject.UseVisualStyleBackColor = false;
+            // 
             // panel11
             // 
             this.panel11.Controls.Add(this.btnSearchSubject);
@@ -534,6 +622,16 @@
             this.panel11.Name = "panel11";
             this.panel11.Size = new System.Drawing.Size(356, 63);
             this.panel11.TabIndex = 2;
+            // 
+            // btnSearchSubject
+            // 
+            this.btnSearchSubject.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchSubject.Location = new System.Drawing.Point(217, 11);
+            this.btnSearchSubject.Name = "btnSearchSubject";
+            this.btnSearchSubject.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchSubject.TabIndex = 34;
+            this.btnSearchSubject.Text = "Tìm";
+            this.btnSearchSubject.UseVisualStyleBackColor = false;
             // 
             // txbSearchSubject
             // 
@@ -590,6 +688,36 @@
             this.panel14.Name = "panel14";
             this.panel14.Size = new System.Drawing.Size(350, 75);
             this.panel14.TabIndex = 9;
+            // 
+            // btnAddClass
+            // 
+            this.btnAddClass.BackColor = System.Drawing.Color.Gray;
+            this.btnAddClass.Location = new System.Drawing.Point(4, 12);
+            this.btnAddClass.Name = "btnAddClass";
+            this.btnAddClass.Size = new System.Drawing.Size(110, 50);
+            this.btnAddClass.TabIndex = 35;
+            this.btnAddClass.Text = "Thêm";
+            this.btnAddClass.UseVisualStyleBackColor = false;
+            // 
+            // btnViewClass
+            // 
+            this.btnViewClass.BackColor = System.Drawing.Color.Gray;
+            this.btnViewClass.Location = new System.Drawing.Point(120, 12);
+            this.btnViewClass.Name = "btnViewClass";
+            this.btnViewClass.Size = new System.Drawing.Size(110, 50);
+            this.btnViewClass.TabIndex = 36;
+            this.btnViewClass.Text = "Xem";
+            this.btnViewClass.UseVisualStyleBackColor = false;
+            // 
+            // btnDeleteClass
+            // 
+            this.btnDeleteClass.BackColor = System.Drawing.Color.Gray;
+            this.btnDeleteClass.Location = new System.Drawing.Point(236, 12);
+            this.btnDeleteClass.Name = "btnDeleteClass";
+            this.btnDeleteClass.Size = new System.Drawing.Size(110, 50);
+            this.btnDeleteClass.TabIndex = 37;
+            this.btnDeleteClass.Text = "Xóa";
+            this.btnDeleteClass.UseVisualStyleBackColor = false;
             // 
             // panel22
             // 
@@ -736,6 +864,16 @@
             this.panel12.Size = new System.Drawing.Size(350, 63);
             this.panel12.TabIndex = 2;
             // 
+            // btnSearchClass
+            // 
+            this.btnSearchClass.BackColor = System.Drawing.Color.Gray;
+            this.btnSearchClass.Location = new System.Drawing.Point(217, 11);
+            this.btnSearchClass.Name = "btnSearchClass";
+            this.btnSearchClass.Size = new System.Drawing.Size(128, 42);
+            this.btnSearchClass.TabIndex = 34;
+            this.btnSearchClass.Text = "Tìm";
+            this.btnSearchClass.UseVisualStyleBackColor = false;
+            // 
             // txbSearchClass
             // 
             this.txbSearchClass.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
@@ -763,155 +901,61 @@
             this.lvClass.TabIndex = 0;
             this.lvClass.UseCompatibleStateImageBehavior = false;
             // 
-            // btnDeleteStudent
+            // dtgvListStudent
             // 
-            this.btnDeleteStudent.BackColor = System.Drawing.Color.Gray;
-            this.btnDeleteStudent.Location = new System.Drawing.Point(238, 11);
-            this.btnDeleteStudent.Name = "btnDeleteStudent";
-            this.btnDeleteStudent.Size = new System.Drawing.Size(110, 50);
-            this.btnDeleteStudent.TabIndex = 34;
-            this.btnDeleteStudent.Text = "Xóa";
-            this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgvListStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvListStudent.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgvListStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvListStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListStudent.DoubleBuffered = true;
+            this.dtgvListStudent.EnableHeadersVisualStyles = false;
+            this.dtgvListStudent.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStudent.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStudent.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListStudent.Name = "dtgvListStudent";
+            this.dtgvListStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvListStudent.RowTemplate.Height = 24;
+            this.dtgvListStudent.Size = new System.Drawing.Size(440, 507);
+            this.dtgvListStudent.TabIndex = 0;
             // 
-            // btnViewStudent
+            // dtgvListStaff
             // 
-            this.btnViewStudent.BackColor = System.Drawing.Color.Gray;
-            this.btnViewStudent.Location = new System.Drawing.Point(122, 11);
-            this.btnViewStudent.Name = "btnViewStudent";
-            this.btnViewStudent.Size = new System.Drawing.Size(110, 50);
-            this.btnViewStudent.TabIndex = 34;
-            this.btnViewStudent.Text = "Xem";
-            this.btnViewStudent.UseVisualStyleBackColor = false;
-            // 
-            // btnAddStudent
-            // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.Gray;
-            this.btnAddStudent.Location = new System.Drawing.Point(6, 11);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(110, 50);
-            this.btnAddStudent.TabIndex = 34;
-            this.btnAddStudent.Text = "Thêm";
-            this.btnAddStudent.UseVisualStyleBackColor = false;
-            // 
-            // btnAddStaff
-            // 
-            this.btnAddStaff.BackColor = System.Drawing.Color.Gray;
-            this.btnAddStaff.Location = new System.Drawing.Point(3, 12);
-            this.btnAddStaff.Name = "btnAddStaff";
-            this.btnAddStaff.Size = new System.Drawing.Size(110, 50);
-            this.btnAddStaff.TabIndex = 35;
-            this.btnAddStaff.Text = "Thêm";
-            this.btnAddStaff.UseVisualStyleBackColor = false;
-            // 
-            // btnViewStaff
-            // 
-            this.btnViewStaff.BackColor = System.Drawing.Color.Gray;
-            this.btnViewStaff.Location = new System.Drawing.Point(119, 12);
-            this.btnViewStaff.Name = "btnViewStaff";
-            this.btnViewStaff.Size = new System.Drawing.Size(110, 50);
-            this.btnViewStaff.TabIndex = 36;
-            this.btnViewStaff.Text = "Xem";
-            this.btnViewStaff.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteStaff
-            // 
-            this.btnDeleteStaff.BackColor = System.Drawing.Color.Gray;
-            this.btnDeleteStaff.Location = new System.Drawing.Point(235, 12);
-            this.btnDeleteStaff.Name = "btnDeleteStaff";
-            this.btnDeleteStaff.Size = new System.Drawing.Size(110, 50);
-            this.btnDeleteStaff.TabIndex = 37;
-            this.btnDeleteStaff.Text = "Xóa";
-            this.btnDeleteStaff.UseVisualStyleBackColor = false;
-            // 
-            // btnAddSubject
-            // 
-            this.btnAddSubject.BackColor = System.Drawing.Color.Gray;
-            this.btnAddSubject.Location = new System.Drawing.Point(7, 12);
-            this.btnAddSubject.Name = "btnAddSubject";
-            this.btnAddSubject.Size = new System.Drawing.Size(110, 50);
-            this.btnAddSubject.TabIndex = 35;
-            this.btnAddSubject.Text = "Thêm";
-            this.btnAddSubject.UseVisualStyleBackColor = false;
-            // 
-            // btnEditSubject
-            // 
-            this.btnEditSubject.BackColor = System.Drawing.Color.Gray;
-            this.btnEditSubject.Location = new System.Drawing.Point(123, 12);
-            this.btnEditSubject.Name = "btnEditSubject";
-            this.btnEditSubject.Size = new System.Drawing.Size(110, 50);
-            this.btnEditSubject.TabIndex = 36;
-            this.btnEditSubject.Text = "Sửa";
-            this.btnEditSubject.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteSubject
-            // 
-            this.btnDeleteSubject.BackColor = System.Drawing.Color.Gray;
-            this.btnDeleteSubject.Location = new System.Drawing.Point(239, 12);
-            this.btnDeleteSubject.Name = "btnDeleteSubject";
-            this.btnDeleteSubject.Size = new System.Drawing.Size(110, 50);
-            this.btnDeleteSubject.TabIndex = 37;
-            this.btnDeleteSubject.Text = "Xóa";
-            this.btnDeleteSubject.UseVisualStyleBackColor = false;
-            // 
-            // btnAddClass
-            // 
-            this.btnAddClass.BackColor = System.Drawing.Color.Gray;
-            this.btnAddClass.Location = new System.Drawing.Point(4, 12);
-            this.btnAddClass.Name = "btnAddClass";
-            this.btnAddClass.Size = new System.Drawing.Size(110, 50);
-            this.btnAddClass.TabIndex = 35;
-            this.btnAddClass.Text = "Thêm";
-            this.btnAddClass.UseVisualStyleBackColor = false;
-            // 
-            // btnViewClass
-            // 
-            this.btnViewClass.BackColor = System.Drawing.Color.Gray;
-            this.btnViewClass.Location = new System.Drawing.Point(120, 12);
-            this.btnViewClass.Name = "btnViewClass";
-            this.btnViewClass.Size = new System.Drawing.Size(110, 50);
-            this.btnViewClass.TabIndex = 36;
-            this.btnViewClass.Text = "Xem";
-            this.btnViewClass.UseVisualStyleBackColor = false;
-            // 
-            // btnDeleteClass
-            // 
-            this.btnDeleteClass.BackColor = System.Drawing.Color.Gray;
-            this.btnDeleteClass.Location = new System.Drawing.Point(236, 12);
-            this.btnDeleteClass.Name = "btnDeleteClass";
-            this.btnDeleteClass.Size = new System.Drawing.Size(110, 50);
-            this.btnDeleteClass.TabIndex = 37;
-            this.btnDeleteClass.Text = "Xóa";
-            this.btnDeleteClass.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchStaff
-            // 
-            this.btnSearchStaff.BackColor = System.Drawing.Color.Gray;
-            this.btnSearchStaff.Location = new System.Drawing.Point(220, 11);
-            this.btnSearchStaff.Name = "btnSearchStaff";
-            this.btnSearchStaff.Size = new System.Drawing.Size(128, 42);
-            this.btnSearchStaff.TabIndex = 34;
-            this.btnSearchStaff.Text = "Tìm";
-            this.btnSearchStaff.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchSubject
-            // 
-            this.btnSearchSubject.BackColor = System.Drawing.Color.Gray;
-            this.btnSearchSubject.Location = new System.Drawing.Point(217, 11);
-            this.btnSearchSubject.Name = "btnSearchSubject";
-            this.btnSearchSubject.Size = new System.Drawing.Size(128, 42);
-            this.btnSearchSubject.TabIndex = 34;
-            this.btnSearchSubject.Text = "Tìm";
-            this.btnSearchSubject.UseVisualStyleBackColor = false;
-            // 
-            // btnSearchClass
-            // 
-            this.btnSearchClass.BackColor = System.Drawing.Color.Gray;
-            this.btnSearchClass.Location = new System.Drawing.Point(217, 11);
-            this.btnSearchClass.Name = "btnSearchClass";
-            this.btnSearchClass.Size = new System.Drawing.Size(128, 42);
-            this.btnSearchClass.TabIndex = 34;
-            this.btnSearchClass.Text = "Tìm";
-            this.btnSearchClass.UseVisualStyleBackColor = false;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgvListStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvListStaff.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgvListStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvListStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListStaff.DoubleBuffered = true;
+            this.dtgvListStaff.EnableHeadersVisualStyles = false;
+            this.dtgvListStaff.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStaff.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStaff.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListStaff.Name = "dtgvListStaff";
+            this.dtgvListStaff.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvListStaff.RowTemplate.Height = 24;
+            this.dtgvListStaff.Size = new System.Drawing.Size(440, 507);
+            this.dtgvListStaff.TabIndex = 0;
             // 
             // nManagement
             // 
@@ -965,6 +1009,8 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -979,9 +1025,7 @@
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.TextBox txbSearchStudent;
-        private System.Windows.Forms.ListView lvStudent;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.ListView lvStaff;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.ListView lvSubject;
         private System.Windows.Forms.Panel panel7;
@@ -1049,5 +1093,7 @@
         private System.Windows.Forms.Button btnViewClass;
         private System.Windows.Forms.Button btnDeleteClass;
         private System.Windows.Forms.Button btnSearchClass;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvListStudent;
+        private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvListStaff;
     }
 }

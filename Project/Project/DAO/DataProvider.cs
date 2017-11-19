@@ -21,7 +21,7 @@ namespace Project
         private DataProvider() { }
 
         // Đường dẫn đến SQL
-        private string connectionSTR = "";
+        private string connectionSTR = "Data Source=YUU\\YUU;Initial Catalog=StudentManagement;Integrated Security=True";
 
         //
         public DataTable ExecuteQuery(string query, object[] parameter = null)

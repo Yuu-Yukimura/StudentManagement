@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Project.DAO;
 
 namespace Project
 {
@@ -24,10 +25,19 @@ namespace Project
         // Click button Login ( nhấn nút Đẳng nhập )
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            nMain t = new nMain();
-            this.Hide();
-            t.ShowDialog();
-            this.Show();
+            string userName = txbUserName.Text;
+            string passWord = txbPassWord.Text;
+            if(Login(userName, passWord))
+            {
+                nMain t = new nMain();
+                this.Hide();
+                t.ShowDialog();
+                this.Show();
+            }
+            else
+            {
+                MessageBox.Show("Tên đẳng nhập hoặc mật khẩu sai, xin hãy nhập lại.","Thông báo",MessageBoxButtons.OK);
+            }
         }
 
         // Click button Exit ( nhấn nút Thoát )
@@ -57,7 +67,13 @@ namespace Project
 
         #region Method
 
-        //
+        // Hàm xử lý đẳng nhập
+        private bool Login(string userName, string passWord)
+        {
+            return AccountDAO.Instance.Login(userName, passWord);
+        }
+
+
 
         #endregion
 

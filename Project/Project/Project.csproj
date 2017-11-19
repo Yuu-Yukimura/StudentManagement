@@ -51,7 +51,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DataProvider.cs" />
+    <Compile Include="DAO\AccountDAO.cs" />
+    <Compile Include="DAO\DataProvider.cs" />
+    <Compile Include="DAO\StaffDAO.cs" />
+    <Compile Include="DAO\StudentDAO.cs" />
+    <Compile Include="DTO\AccountDTO.cs" />
     <Compile Include="UserControl\changePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -230,12 +234,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DAO\" />
-    <Folder Include="DTO\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <None Include="Resources\backIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Avatar\Staff\Female.png" />
+    <Content Include="Avatar\Staff\Male.png" />
+    <Content Include="Avatar\Student\Female.png" />
+    <Content Include="Avatar\Student\Male.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
