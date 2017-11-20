@@ -268,9 +268,127 @@ GO
 
 
 -- 6.bảng môn học
-
-
-
+-- 6.1 
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Toán cao cấp 1', -- Name - nvarchar(50)
+            1250000-- Money - money
+          )
+-- 6.2 
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Toán cao cấp 2', -- Name - nvarchar(50)
+            1350000-- Money - money
+          )
+-- 6.3
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Giáo dục thể chất 1', -- Name - nvarchar(50)
+            700000-- Money - money
+          )
+-- 6.4
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Tin học đại cương', -- Name - nvarchar(50)
+            1250000-- Money - money
+          )
+-- 6.5
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Toeic 1', -- Name - nvarchar(50)
+            1000000-- Money - money
+          )
+-- 6.6
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Kỹ thuật lập trình', -- Name - nvarchar(50)
+            1500000-- Money - money
+          )
+-- 6.7
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Mạng máy tính', -- Name - nvarchar(50)
+            1100000-- Money - money
+          )
+-- 6.8
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lập trình hướng đối tượng', -- Name - nvarchar(50)
+            1300000-- Money - money
+          )
+-- 6.9
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Toán rời rạc và tập mờ', -- Name - nvarchar(50)
+            1000000-- Money - money
+          )
+-- 6.10
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Toeic 2', -- Name - nvarchar(50)
+            1200000-- Money - money
+          )
+-- 6.11
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Tiếng Anh chuyên ngành công nghệ thông tin', -- Name - nvarchar(50)
+            1400000-- Money - money
+          )
+-- 6.12
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lý thuyết đồ thị', -- Name - nvarchar(50)
+            1350000-- Money - money
+          )
+-- 6.13
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Phương pháp nghiên cứu khoa học', -- Name - nvarchar(50)
+            800000-- Money - money
+          )
+-- 6.14
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Cơ sở dữ liệu', -- Name - nvarchar(50)
+            1000000-- Money - money
+          )
+-- 6.15
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lập trình Java', -- Name - nvarchar(50)
+            1250000-- Money - money
+          )
+-- 6.16
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Cấu trúc dữ liệu và giải thuật', -- Name - nvarchar(50)
+            1300000-- Money - money
+          )
+-- 6.17
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lập trình .Net', -- Name - nvarchar(50)
+            1500000-- Money - money
+          )
+-- 6.18
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lập trình Android cơ bản', -- Name - nvarchar(50)
+            1250000-- Money - money
+          )
+-- 6.19
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Lập trình Android nâng cao', -- Name - nvarchar(50)
+            1350000-- Money - money
+          )
+-- 6.20
+INSERT dbo.Subject
+        ( Name, Money )
+VALUES  ( N'Công nghệ phần mềm', -- Name - nvarchar(50)
+            1000000-- Money - money
+          )
+GO
 -- 7.bảng lớp
 
 
@@ -316,3 +434,24 @@ GO
 CREATE PROC USP_LoadStaffList
 AS SELECT * FROM dbo.Staff
 GO
+
+-- Hiển thị thông tin sinh viên bằng ID
+CREATE PROC USP_ViewStudentByID
+@iD INT
+AS
+BEGIN
+	SELECT * FROM dbo.Student WHERE ID = @iD
+END
+GO
+
+-- Chỉnh sửa thông tin sinh viên bằng ID
+CREATE PROC USP_EditStudentByID
+@iD INT, @Name NVARCHAR(50), @Avatar IMAGE, @Sex BIT, @DateOfBirth DATE, @Address NVARCHAR(50), @Phone VARCHAR(20), @ParentPhone VARCHAR(20)
+AS
+BEGIN
+	UPDATE dbo.Student
+	SET Name = @Name, Avatar = @Avatar, Sex = @Sex, DateOfBirth = @DateOfBirth, Address = @Address, Phone = @Phone, ParentPhone = @ParentPhone
+	WHERE ID = @iD
+END
+GO
+

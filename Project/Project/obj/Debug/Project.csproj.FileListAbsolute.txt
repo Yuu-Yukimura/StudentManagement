@@ -71,4 +71,5 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Proj
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucEditAccount.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucEditStaff.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucViewStaff.resources
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucEditStudent.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucViewStudent.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.fViewStudent.resources

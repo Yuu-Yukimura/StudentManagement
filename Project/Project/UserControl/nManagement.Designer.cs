@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(nManagement));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -49,6 +49,7 @@
             this.btnSearchStudent = new System.Windows.Forms.Button();
             this.txbSearchStudent = new System.Windows.Forms.TextBox();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dtgvListStudent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.panel9 = new System.Windows.Forms.Panel();
             this.btnAddStaff = new System.Windows.Forms.Button();
@@ -64,6 +65,7 @@
             this.btnSearchStaff = new System.Windows.Forms.Button();
             this.txbSearchStaff = new System.Windows.Forms.TextBox();
             this.panel5 = new System.Windows.Forms.Panel();
+            this.dtgvListStaff = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.panel15 = new System.Windows.Forms.Panel();
             this.panel23 = new System.Windows.Forms.Panel();
@@ -109,8 +111,6 @@
             this.txbSearchClass = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lvClass = new System.Windows.Forms.ListView();
-            this.dtgvListStudent = new Bunifu.Framework.UI.BunifuCustomDataGrid();
-            this.dtgvListStaff = new Bunifu.Framework.UI.BunifuCustomDataGrid();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -118,12 +118,14 @@
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStudent)).BeginInit();
             this.panel2.SuspendLayout();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).BeginInit();
             this.tabPage2.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel10.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatarStaff)).BeginInit();
             this.panel8.SuspendLayout();
             this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).BeginInit();
             this.tabPage3.SuspendLayout();
             this.panel15.SuspendLayout();
             this.panel23.SuspendLayout();
@@ -141,8 +143,6 @@
             this.panel18.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -207,6 +207,7 @@
             this.btnViewStudent.TabIndex = 34;
             this.btnViewStudent.Text = "Xem";
             this.btnViewStudent.UseVisualStyleBackColor = false;
+            this.btnViewStudent.Click += new System.EventHandler(this.btnViewStudent_Click);
             // 
             // btnDeleteStudent
             // 
@@ -313,6 +314,34 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(440, 507);
             this.panel1.TabIndex = 0;
+            // 
+            // dtgvListStudent
+            // 
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgvListStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvListStudent.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgvListStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvListStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListStudent.DoubleBuffered = true;
+            this.dtgvListStudent.EnableHeadersVisualStyles = false;
+            this.dtgvListStudent.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStudent.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStudent.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListStudent.Name = "dtgvListStudent";
+            this.dtgvListStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvListStudent.RowTemplate.Height = 24;
+            this.dtgvListStudent.Size = new System.Drawing.Size(440, 507);
+            this.dtgvListStudent.TabIndex = 0;
             // 
             // tabPage2
             // 
@@ -466,6 +495,34 @@
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(440, 507);
             this.panel5.TabIndex = 1;
+            // 
+            // dtgvListStaff
+            // 
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.dtgvListStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvListStaff.BackgroundColor = System.Drawing.Color.Gainsboro;
+            this.dtgvListStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvListStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dtgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.dtgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListStaff.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListStaff.DoubleBuffered = true;
+            this.dtgvListStaff.EnableHeadersVisualStyles = false;
+            this.dtgvListStaff.HeaderBgColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStaff.HeaderForeColor = System.Drawing.Color.SeaGreen;
+            this.dtgvListStaff.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListStaff.Name = "dtgvListStaff";
+            this.dtgvListStaff.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            this.dtgvListStaff.RowTemplate.Height = 24;
+            this.dtgvListStaff.Size = new System.Drawing.Size(440, 507);
+            this.dtgvListStaff.TabIndex = 0;
             // 
             // tabPage3
             // 
@@ -901,62 +958,6 @@
             this.lvClass.TabIndex = 0;
             this.lvClass.UseCompatibleStateImageBehavior = false;
             // 
-            // dtgvListStudent
-            // 
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtgvListStudent.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.dtgvListStudent.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dtgvListStudent.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvListStudent.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvListStudent.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtgvListStudent.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvListStudent.DoubleBuffered = true;
-            this.dtgvListStudent.EnableHeadersVisualStyles = false;
-            this.dtgvListStudent.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dtgvListStudent.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dtgvListStudent.Location = new System.Drawing.Point(0, 0);
-            this.dtgvListStudent.Name = "dtgvListStudent";
-            this.dtgvListStudent.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvListStudent.RowTemplate.Height = 24;
-            this.dtgvListStudent.Size = new System.Drawing.Size(440, 507);
-            this.dtgvListStudent.TabIndex = 0;
-            // 
-            // dtgvListStaff
-            // 
-            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.dtgvListStaff.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle3;
-            this.dtgvListStaff.BackgroundColor = System.Drawing.Color.Gainsboro;
-            this.dtgvListStaff.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.dtgvListStaff.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            dataGridViewCellStyle4.ForeColor = System.Drawing.Color.SeaGreen;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dtgvListStaff.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.dtgvListStaff.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dtgvListStaff.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dtgvListStaff.DoubleBuffered = true;
-            this.dtgvListStaff.EnableHeadersVisualStyles = false;
-            this.dtgvListStaff.HeaderBgColor = System.Drawing.Color.SeaGreen;
-            this.dtgvListStaff.HeaderForeColor = System.Drawing.Color.SeaGreen;
-            this.dtgvListStaff.Location = new System.Drawing.Point(0, 0);
-            this.dtgvListStaff.Name = "dtgvListStaff";
-            this.dtgvListStaff.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
-            this.dtgvListStaff.RowTemplate.Height = 24;
-            this.dtgvListStaff.Size = new System.Drawing.Size(440, 507);
-            this.dtgvListStaff.TabIndex = 0;
-            // 
             // nManagement
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -974,6 +975,7 @@
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).EndInit();
             this.tabPage2.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
             this.panel10.ResumeLayout(false);
@@ -982,6 +984,7 @@
             this.panel8.ResumeLayout(false);
             this.panel8.PerformLayout();
             this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).EndInit();
             this.tabPage3.ResumeLayout(false);
             this.panel15.ResumeLayout(false);
             this.panel23.ResumeLayout(false);
@@ -1009,8 +1012,6 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel7.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStudent)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dtgvListStaff)).EndInit();
             this.ResumeLayout(false);
 
         }

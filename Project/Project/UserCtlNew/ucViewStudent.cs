@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Project.UserCtlNew
 {
-    public partial class ucEditStudent : UserControl
+    public partial class ucViewStudent : UserControl
     {
-        public ucEditStudent()
+        public ucViewStudent()
         {
             InitializeComponent();
+        }
+
+        public ucViewStudent(string id)
+        {
+            int ID = int.Parse(id);
         }
     }
 }

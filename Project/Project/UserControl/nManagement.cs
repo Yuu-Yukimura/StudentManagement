@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using Project.DAO;
 using Project.DTO;
+using Project.UserCtlNew;
 
 namespace Project
 {
@@ -26,7 +27,12 @@ namespace Project
 
         #region Event
 
-        //
+        //Click vào nút xem thông tin sinh viên
+        private void btnViewStudent_Click(object sender, EventArgs e)
+        {
+            fViewStudent f = new fViewStudent(txbIDStudent.Text);
+            f.Show();
+        }
 
         #endregion
 

@@ -57,6 +57,12 @@
     <Compile Include="DAO\StudentDAO.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />
+    <Compile Include="fViewStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fViewStudent.Designer.cs">
+      <DependentUpon>fViewStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="UserControl\changePassword.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -155,12 +161,15 @@
     <Compile Include="UserCtlNew\ucViewStaff.Designer.cs">
       <DependentUpon>ucViewStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserCtlNew\ucEditStudent.cs">
+    <Compile Include="UserCtlNew\ucViewStudent.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="UserCtlNew\ucEditStudent.Designer.cs">
-      <DependentUpon>ucEditStudent.cs</DependentUpon>
+    <Compile Include="UserCtlNew\ucViewStudent.Designer.cs">
+      <DependentUpon>ucViewStudent.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="fViewStudent.resx">
+      <DependentUpon>fViewStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControl\changePassword.resx">
       <DependentUpon>changePassword.cs</DependentUpon>
     </EmbeddedResource>
@@ -219,8 +228,8 @@
     <EmbeddedResource Include="UserCtlNew\ucViewStaff.resx">
       <DependentUpon>ucViewStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserCtlNew\ucEditStudent.resx">
-      <DependentUpon>ucEditStudent.cs</DependentUpon>
+    <EmbeddedResource Include="UserCtlNew\ucViewStudent.resx">
+      <DependentUpon>ucViewStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

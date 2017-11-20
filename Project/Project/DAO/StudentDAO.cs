@@ -41,5 +41,18 @@ namespace Project.DAO
             return DataProvider.Instance.ExecuteQuery("SELECT ID, Name FROM dbo.Student");
         }
 
+        //Hàm chỉ lấy sinh viên theo id
+        public DataTable LoadStudentById(int id)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_ViewStudentByID @iD", new object[] {id });
+        }
+
+        //Hàm chỉnh sửa thông tin sinh viên theo id
+        public DataTable EditStudentById(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_EditStudentByID @iD , @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", 
+                                                            new object[] {id, name, null, sex, dateOfBirth, address, phone, parentPhone });
+        }
+
     }
 }
