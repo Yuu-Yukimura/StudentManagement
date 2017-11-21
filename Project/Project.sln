@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.27004.2008
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Project", "Project\Project.csproj", "{187306DE-9B81-473A-A303-73ABC8A10A7F}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BUS", "BUS\BUS.csproj", "{130063D0-50E7-4AAD-98EC-018467476792}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DAO", "DAO\DAO.csproj", "{06362886-923A-4337-9CE9-B155033D18F3}"
@@ -19,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{187306DE-9B81-473A-A303-73ABC8A10A7F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{187306DE-9B81-473A-A303-73ABC8A10A7F}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{187306DE-9B81-473A-A303-73ABC8A10A7F}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{187306DE-9B81-473A-A303-73ABC8A10A7F}.Release|Any CPU.Build.0 = Release|Any CPU
 		{130063D0-50E7-4AAD-98EC-018467476792}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{130063D0-50E7-4AAD-98EC-018467476792}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{130063D0-50E7-4AAD-98EC-018467476792}.Release|Any CPU.ActiveCfg = Release|Any CPU

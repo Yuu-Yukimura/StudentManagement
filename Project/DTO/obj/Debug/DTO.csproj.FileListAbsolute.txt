@@ -1,0 +1,8 @@
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.Properties.Resources.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.csproj.GenerateResource.Cache
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.csproj.CoreCompileInputs.cache
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\bin\Debug\DTO.exe.config
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\bin\Debug\DTO.exe
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\bin\Debug\DTO.pdb
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.exe
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.pdb

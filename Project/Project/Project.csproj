@@ -70,48 +70,6 @@
     <Compile Include="fViewStudent.Designer.cs">
       <DependentUpon>fViewStudent.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserControl\changePassword.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\changePassword.Designer.cs">
-      <DependentUpon>changePassword.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\infoApplication.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\infoApplication.Designer.cs">
-      <DependentUpon>infoApplication.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\nDebt.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\nDebt.Designer.cs">
-      <DependentUpon>nDebt.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\nHome.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\nHome.Designer.cs">
-      <DependentUpon>nHome.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\nList.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\nList.Designer.cs">
-      <DependentUpon>nList.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\nManagement.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\nManagement.Designer.cs">
-      <DependentUpon>nManagement.cs</DependentUpon>
-    </Compile>
-    <Compile Include="UserControl\nStaff.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserControl\nStaff.Designer.cs">
-      <DependentUpon>nStaff.cs</DependentUpon>
-    </Compile>
     <Compile Include="nLogin.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -167,27 +125,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="fViewStudent.resx">
       <DependentUpon>fViewStudent.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\changePassword.resx">
-      <DependentUpon>changePassword.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\infoApplication.resx">
-      <DependentUpon>infoApplication.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\nDebt.resx">
-      <DependentUpon>nDebt.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\nHome.resx">
-      <DependentUpon>nHome.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\nList.resx">
-      <DependentUpon>nList.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\nManagement.resx">
-      <DependentUpon>nManagement.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserControl\nStaff.resx">
-      <DependentUpon>nStaff.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="nLogin.resx">
       <DependentUpon>nLogin.cs</DependentUpon>
