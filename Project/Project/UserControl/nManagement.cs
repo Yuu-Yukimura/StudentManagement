@@ -31,7 +31,8 @@ namespace Project
         private void btnViewStudent_Click(object sender, EventArgs e)
         {
             fViewStudent f = new fViewStudent(txbIDStudent.Text);
-            f.Show();
+            f.ShowDialog();
+            LoadStudent();
         }
 
         #endregion
@@ -49,17 +50,18 @@ namespace Project
         //Load thông tin sinh viên
         private void LoadStudent()
         {
-            dtgvListStudent.DataSource = StudentDAO.Instance.Load_ID_Name_Student();
+            dtgvListStudent.DataSource = StudentDAO.Instance.Load_ID_Name_Avatar_Student();
             //Thay đổi width cho column Name
             DataGridViewColumn columnName = dtgvListStudent.Columns[1];
-            columnName.Width = 295;
+            columnName.Width = 300;
         }
 
         //Liên kết thông tin sinh viên
         private void AddStudentBinding()
-        {
+        {           
             txbIDStudent.DataBindings.Add(new Binding("Text", dtgvListStudent.DataSource, "ID"));
             txbNameStudent.DataBindings.Add(new Binding("Text", dtgvListStudent.DataSource, "Name"));
+            pbxAvatarStudent.DataBindings.Add(new Binding("Image", dtgvListStudent.DataSource, "Avatar", true));
         }
 
         //Load thông tin nhân viên

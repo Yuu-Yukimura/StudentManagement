@@ -312,6 +312,7 @@
             this.pbxAvatarViewStudent.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAvatarViewStudent.TabIndex = 33;
             this.pbxAvatarViewStudent.TabStop = false;
+            this.pbxAvatarViewStudent.Click += new System.EventHandler(this.pbxAvatarViewStudent_Click);
             // 
             // panel3
             // 

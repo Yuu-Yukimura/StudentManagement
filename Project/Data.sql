@@ -27,7 +27,7 @@ CREATE TABLE Staff
 	-- INFO
 	ID INT PRIMARY KEY IDENTITY,
 	Name NVARCHAR(50) NOT NULL DEFAULT 'Chưa đặt tên',
-	Avatar IMAGE,
+	Avatar varbinary(MAX),
 	Sex BIT NOT NULL DEFAULT 1, -- 0 là nữ, 1 là nam
 	DateOfBirth DATE NOT NULL DEFAULT '19900101',
 	Address NVARCHAR(50) NOT NULL,
@@ -58,7 +58,7 @@ CREATE TABLE Student
 	-- INFO
 	ID INT PRIMARY KEY IDENTITY,
 	Name NVARCHAR(50) NOT NULL DEFAULT 'Chưa đặt tên',
-	Avatar IMAGE,
+	Avatar varbinary(MAX),
 	Sex BIT NOT NULL DEFAULT 1, -- 0 là nữ, 1 là nam
 	DateOfBirth DATE NOT NULL DEFAULT '20000101',
 	Address NVARCHAR(50) NOT NULL,

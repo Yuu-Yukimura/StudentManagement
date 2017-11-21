@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,9 +37,9 @@ namespace Project.DAO
         }
 
         //Hàm chỉ lấy Id và Name sinh viên từ csdl
-        public DataTable Load_ID_Name_Student()
+        public DataTable Load_ID_Name_Avatar_Student()
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT ID, Name FROM dbo.Student");
+            return DataProvider.Instance.ExecuteQuery("SELECT ID, Name, Avatar FROM dbo.Student");
         }
 
         //Hàm chỉ lấy sinh viên theo id
@@ -48,10 +49,11 @@ namespace Project.DAO
         }
 
         //Hàm chỉnh sửa thông tin sinh viên theo id
-        public DataTable EditStudentById(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public bool EditStudentById(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
         {
-            return DataProvider.Instance.ExecuteQuery("USP_EditStudentByID @iD , @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", 
-                                                            new object[] {id, name, null, sex, dateOfBirth, address, phone, parentPhone });
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_EditStudentByID @iD , @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", 
+                                                            new object[] {id, name, avatar, sex, dateOfBirth, address, phone, parentPhone });
+            return result > 0;
         }
 
     }
