@@ -6,3 +6,4 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\bin\Debug\DTO.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\bin\Debug\DTO.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.pdb
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
