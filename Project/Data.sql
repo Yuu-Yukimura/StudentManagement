@@ -455,3 +455,12 @@ BEGIN
 END
 GO
 
+-- Thêm một sinh viên
+CREATE PROC USP_InsertStudent
+@Name NVARCHAR(50), @Avatar IMAGE, @Sex BIT, @DateOfBirth DATE, @Address NVARCHAR(50), @Phone VARCHAR(20), @ParentPhone VARCHAR(20)
+AS
+BEGIN
+	INSERT dbo.Student (Name, Avatar, Sex, DateOfBirth, Address, Phone, ParentPhone)
+				 VALUES(@Name, @Avatar, @Sex, @DateOfBirth, @Address, @Phone, @ParentPhone)
+END
+GO

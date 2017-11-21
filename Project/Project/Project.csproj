@@ -58,6 +58,12 @@
     <Compile Include="DAO\Utility.cs" />
     <Compile Include="DTO\Staff.cs" />
     <Compile Include="DTO\Student.cs" />
+    <Compile Include="fAddStudent.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="fAddStudent.Designer.cs">
+      <DependentUpon>fAddStudent.cs</DependentUpon>
+    </Compile>
     <Compile Include="fViewStudent.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,12 +144,6 @@
     <Compile Include="UserCtlNew\ucAddStaff.Designer.cs">
       <DependentUpon>ucAddStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserCtlNew\ucAddStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserCtlNew\ucAddStudent.Designer.cs">
-      <DependentUpon>ucAddStudent.cs</DependentUpon>
-    </Compile>
     <Compile Include="UserCtlNew\ucEditAccount.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -162,12 +162,9 @@
     <Compile Include="UserCtlNew\ucViewStaff.Designer.cs">
       <DependentUpon>ucViewStaff.cs</DependentUpon>
     </Compile>
-    <Compile Include="UserCtlNew\ucViewStudent.cs">
-      <SubType>UserControl</SubType>
-    </Compile>
-    <Compile Include="UserCtlNew\ucViewStudent.Designer.cs">
-      <DependentUpon>ucViewStudent.cs</DependentUpon>
-    </Compile>
+    <EmbeddedResource Include="fAddStudent.resx">
+      <DependentUpon>fAddStudent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="fViewStudent.resx">
       <DependentUpon>fViewStudent.cs</DependentUpon>
     </EmbeddedResource>
@@ -217,9 +214,6 @@
     <EmbeddedResource Include="UserCtlNew\ucAddStaff.resx">
       <DependentUpon>ucAddStaff.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="UserCtlNew\ucAddStudent.resx">
-      <DependentUpon>ucAddStudent.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucEditAccount.resx">
       <DependentUpon>ucEditAccount.cs</DependentUpon>
     </EmbeddedResource>
@@ -228,9 +222,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserCtlNew\ucViewStaff.resx">
       <DependentUpon>ucViewStaff.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="UserCtlNew\ucViewStudent.resx">
-      <DependentUpon>ucViewStudent.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

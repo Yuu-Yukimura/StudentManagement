@@ -64,12 +64,11 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Proj
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.nHome.resources
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucAddStudent.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucAddStaff.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.nEditAccount.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucAddAccount.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucEditAccount.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucEditStaff.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucViewStaff.resources
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.UserCtlNew.ucViewStudent.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.fViewStudent.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\Project\obj\Debug\Project.fAddStudent.resources

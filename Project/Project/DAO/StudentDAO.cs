@@ -56,5 +56,21 @@ namespace Project.DAO
             return result > 0;
         }
 
+        //Hàm thêm một sinh viên vào csdl
+        public bool InsertStudent(string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertStudent @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", new object[] {name, avatar, sex, dateOfBirth, address, phone, parentPhone});
+
+            return result > 0;
+        }
+
+        //Hàm xóa một sinh trong csdl
+        public bool DeleteStudent(int id)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("DELETE FROM dbo.Student WHERE ID = " + id);
+
+            return result > 0;
+        }
+
     }
 }

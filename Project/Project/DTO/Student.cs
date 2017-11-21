@@ -9,84 +9,57 @@ namespace Project.DTO
 {
     class Student
     {
-        private int iD;
-        private string name;
-        private byte[] avatar;
-        private Boolean sex;
-        private DateTime dateOfBirth;
-        private string address;
-        private string phone;
-        private string parentPhone;
 
-        #region Set and Get
+        public int ID { get; set; }
+        public string Name { get; set; }
+        public byte[] Avatar { get; set; }
+        public Boolean Sex { get; set; }
+        public DateTime DateOfBirth { get; set; }
+        public string Address { get; set; }
+        public string Phone { get; set; }
+        public string ParentPhone { get; set; }
+       
+        public Student() { }
 
-        public int ID { get => iD; set => iD = value; }
-        public string Name { get => name; set => name = value; }
-        public byte[] Avatar { get => avatar; set => avatar = value; }
-        public Boolean Sex { get => sex; set => sex = value; }
-        public DateTime DateOfBirth { get => dateOfBirth; set => dateOfBirth = value; }
-        public string Address { get => address; set => address = value; }
-        public string Phone { get => phone; set => phone = value; }
-        public string ParentPhone { get => parentPhone; set => parentPhone = value; }
-
-        #endregion
-
-        #region Constructor
-
-        public Student(int id, string name, byte[] avatar , Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public Student(int id)
         {
-            this.iD = id;
-            this.name = name;
-            this.avatar = avatar;
-            this.sex = sex;
-            this.dateOfBirth = dateOfBirth;
-            this.address = address;
-            this.phone = phone;
-            this.parentPhone = parentPhone;
+            this.ID = id;
         }
 
-        public Student (int id, string name, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public Student(int id, string name) : this(id)
         {
-            this.iD = id;
-            this.name = name;
-            this.sex = sex;
-            this.dateOfBirth = dateOfBirth;
-            this.address = address;
-            this.phone = phone;
-            this.parentPhone = parentPhone;
+            this.Name = name;
         }
 
-        public Student(int id, string name, Boolean sex, DateTime dateOfBirth, string address)
+        public Student(int id, string name, byte[] avatar) : this(id, name)
         {
-            this.iD = id;
-            this.name = name;
-            this.sex = sex;
-            this.dateOfBirth = dateOfBirth;
-            this.address = address;
+            this.Avatar = avatar;
         }
 
-        public Student(int id, string name, Boolean sex, DateTime dateOfBirth, string address, string phone)
+        public Student(int id, string name, byte[] avatar, Boolean sex) : this(id, name, avatar)
         {
-            this.iD = id;
-            this.name = name;
-            this.sex = sex;
-            this.dateOfBirth = dateOfBirth;
-            this.address = address;
-            this.phone = phone;
+            this.Sex = sex;
         }
 
-        public Student(DataRow row)
+        public Student(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth) : this(id, name, avatar, sex)
         {
-            this.iD = (int)row["id"];
-            this.name = row["name"].ToString();
-            //this.avatar = (byte[])row["avatar"];
-            this.sex = (Boolean)row["sex"];
-            this.dateOfBirth = (DateTime)row["dateOfBirth"];
-            this.address = row["address"].ToString();
-            this.phone = row["phone"].ToString();
-            this.parentPhone = row["parentPhone"].ToString();
+            this.DateOfBirth = dateOfBirth;
         }
 
-        #endregion
+        public Student(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address) : this(id, name, avatar, sex, dateOfBirth)
+        {
+            this.Address = address;
+        }
+
+        public Student(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone) : this(id, name, avatar, sex, dateOfBirth, address)
+        {
+            this.Phone = phone;
+        }
+
+        public Student(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone) : this(id, name, avatar, sex, dateOfBirth, address, phone)
+        {
+            this.ParentPhone = parentPhone;
+        }
+
     }
 }
