@@ -1,6 +1,6 @@
 ﻿namespace GUI
 {
-    partial class ViewStudentGUI
+    partial class ViewStaffGUI
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewStudentGUI));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(ViewStaffGUI));
             this.bunifuElipse1 = new Bunifu.Framework.UI.BunifuElipse(this.components);
             this.headerViewStudent = new System.Windows.Forms.Panel();
             this.btnExitView = new Bunifu.Framework.UI.BunifuImageButton();
@@ -46,9 +46,6 @@
             this.btnCancel = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pbxAvatar = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.txbParentPhone = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
             this.panel9 = new System.Windows.Forms.Panel();
             this.txbAddress = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
@@ -66,6 +63,18 @@
             this.txbName = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.bunifuDragControl1 = new Bunifu.Framework.UI.BunifuDragControl(this.components);
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.label5 = new System.Windows.Forms.Label();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.label8 = new System.Windows.Forms.Label();
+            this.rdbTeacher = new System.Windows.Forms.RadioButton();
+            this.rdbStaff = new System.Windows.Forms.RadioButton();
+            this.rdbUser = new System.Windows.Forms.RadioButton();
+            this.rdbAdmin = new System.Windows.Forms.RadioButton();
+            this.rdbMarried = new System.Windows.Forms.RadioButton();
+            this.rdbSingle = new System.Windows.Forms.RadioButton();
             this.headerViewStudent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.btnExitView)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizeView)).BeginInit();
@@ -75,12 +84,14 @@
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatar)).BeginInit();
             this.panel3.SuspendLayout();
-            this.panel10.SuspendLayout();
             this.panel9.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel7.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel5.SuspendLayout();
+            this.panel1.SuspendLayout();
+            this.panel4.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // bunifuElipse1
@@ -160,7 +171,7 @@
             this.menuStripLogin.Location = new System.Drawing.Point(875, 7);
             this.menuStripLogin.Name = "menuStripLogin";
             this.menuStripLogin.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
-            this.menuStripLogin.Size = new System.Drawing.Size(101, 36);
+            this.menuStripLogin.Size = new System.Drawing.Size(81, 36);
             this.menuStripLogin.TabIndex = 3;
             this.menuStripLogin.Text = "menuStrip1";
             // 
@@ -170,21 +181,18 @@
             this.btnChangePassword,
             this.btnLogout});
             this.loginToolStripMenuItem.ForeColor = System.Drawing.Color.Silver;
-            this.loginToolStripMenuItem.Image = ((System.Drawing.Image)(resources.GetObject("loginToolStripMenuItem.Image")));
             this.loginToolStripMenuItem.Name = "loginToolStripMenuItem";
-            this.loginToolStripMenuItem.Size = new System.Drawing.Size(93, 32);
+            this.loginToolStripMenuItem.Size = new System.Drawing.Size(73, 32);
             this.loginToolStripMenuItem.Text = "Login";
             // 
             // btnChangePassword
             // 
-            this.btnChangePassword.Image = ((System.Drawing.Image)(resources.GetObject("btnChangePassword.Image")));
             this.btnChangePassword.Name = "btnChangePassword";
             this.btnChangePassword.Size = new System.Drawing.Size(207, 32);
             this.btnChangePassword.Text = "Đổi mật khẩu";
             // 
             // btnLogout
             // 
-            this.btnLogout.Image = ((System.Drawing.Image)(resources.GetObject("btnLogout.Image")));
             this.btnLogout.Name = "btnLogout";
             this.btnLogout.Size = new System.Drawing.Size(207, 32);
             this.btnLogout.Text = "Đăng xuất";
@@ -193,7 +201,6 @@
             // 
             this.btnMinimize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.btnMinimize.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnMinimize.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimize.Image")));
             this.btnMinimize.ImageActive = null;
             this.btnMinimize.Location = new System.Drawing.Point(993, 15);
             this.btnMinimize.Margin = new System.Windows.Forms.Padding(4);
@@ -208,7 +215,6 @@
             // 
             this.btnExit.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(22)))), ((int)(((byte)(33)))));
             this.btnExit.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnExit.Image = ((System.Drawing.Image)(resources.GetObject("btnExit.Image")));
             this.btnExit.ImageActive = null;
             this.btnExit.Location = new System.Drawing.Point(1028, 15);
             this.btnExit.Margin = new System.Windows.Forms.Padding(4);
@@ -239,7 +245,7 @@
             this.btnEdit.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEdit.DisabledColor = System.Drawing.Color.Gray;
             this.btnEdit.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnEdit.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnEdit.Iconimage")));
+            this.btnEdit.Iconimage = null;
             this.btnEdit.Iconimage_right = null;
             this.btnEdit.Iconimage_right_Selected = null;
             this.btnEdit.Iconimage_Selected = null;
@@ -275,7 +281,7 @@
             this.btnCancel.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnCancel.DisabledColor = System.Drawing.Color.Gray;
             this.btnCancel.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnCancel.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnCancel.Iconimage")));
+            this.btnCancel.Iconimage = null;
             this.btnCancel.Iconimage_right = null;
             this.btnCancel.Iconimage_right_Selected = null;
             this.btnCancel.Iconimage_Selected = null;
@@ -312,11 +318,13 @@
             this.pbxAvatar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.pbxAvatar.TabIndex = 33;
             this.pbxAvatar.TabStop = false;
-            this.pbxAvatar.Click += new System.EventHandler(this.pbxAvatarViewStudent_Click);
+            this.pbxAvatar.Click += new System.EventHandler(this.pbxAvatar_Click);
             // 
             // panel3
             // 
             this.panel3.Controls.Add(this.panel10);
+            this.panel3.Controls.Add(this.panel4);
+            this.panel3.Controls.Add(this.panel1);
             this.panel3.Controls.Add(this.panel9);
             this.panel3.Controls.Add(this.panel8);
             this.panel3.Controls.Add(this.panel7);
@@ -327,36 +335,6 @@
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(518, 427);
             this.panel3.TabIndex = 34;
-            // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.txbParentPhone);
-            this.panel10.Controls.Add(this.label5);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel10.Location = new System.Drawing.Point(0, 300);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(518, 50);
-            this.panel10.TabIndex = 36;
-            // 
-            // txbParentPhone
-            // 
-            this.txbParentPhone.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.txbParentPhone.Location = new System.Drawing.Point(209, 7);
-            this.txbParentPhone.Margin = new System.Windows.Forms.Padding(4);
-            this.txbParentPhone.Name = "txbParentPhone";
-            this.txbParentPhone.Size = new System.Drawing.Size(282, 34);
-            this.txbParentPhone.TabIndex = 29;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
-            this.label5.Location = new System.Drawing.Point(18, 10);
-            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(149, 28);
-            this.label5.TabIndex = 29;
-            this.label5.Text = "Sdt phụ huynh :";
             // 
             // panel9
             // 
@@ -533,7 +511,145 @@
             this.bunifuDragControl1.TargetControl = this.headerViewStudent;
             this.bunifuDragControl1.Vertical = true;
             // 
-            // ViewStudentGUI
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.rdbMarried);
+            this.panel1.Controls.Add(this.rdbSingle);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 300);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(518, 50);
+            this.panel1.TabIndex = 36;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label2.Location = new System.Drawing.Point(4, 12);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(197, 28);
+            this.label2.TabIndex = 28;
+            this.label2.Text = "Tình trạng hôn nhân :";
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.rdbTeacher);
+            this.panel4.Controls.Add(this.rdbStaff);
+            this.panel4.Controls.Add(this.label5);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel4.Location = new System.Drawing.Point(0, 350);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(260, 77);
+            this.panel4.TabIndex = 37;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label5.Location = new System.Drawing.Point(4, 13);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(91, 28);
+            this.label5.TabIndex = 28;
+            this.label5.Text = "Chức vụ :";
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.rdbAdmin);
+            this.panel10.Controls.Add(this.rdbUser);
+            this.panel10.Controls.Add(this.label8);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel10.Location = new System.Drawing.Point(258, 350);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(260, 77);
+            this.panel10.TabIndex = 38;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.label8.Location = new System.Drawing.Point(4, 13);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(78, 28);
+            this.label8.TabIndex = 28;
+            this.label8.Text = "Quyền :";
+            // 
+            // rdbTeacher
+            // 
+            this.rdbTeacher.AutoSize = true;
+            this.rdbTeacher.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbTeacher.Location = new System.Drawing.Point(100, 39);
+            this.rdbTeacher.Name = "rdbTeacher";
+            this.rdbTeacher.Size = new System.Drawing.Size(126, 32);
+            this.rdbTeacher.TabIndex = 37;
+            this.rdbTeacher.Text = "Giảng viên";
+            this.rdbTeacher.UseVisualStyleBackColor = true;
+            // 
+            // rdbStaff
+            // 
+            this.rdbStaff.AutoSize = true;
+            this.rdbStaff.Checked = true;
+            this.rdbStaff.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbStaff.Location = new System.Drawing.Point(100, 3);
+            this.rdbStaff.Name = "rdbStaff";
+            this.rdbStaff.Size = new System.Drawing.Size(121, 32);
+            this.rdbStaff.TabIndex = 36;
+            this.rdbStaff.TabStop = true;
+            this.rdbStaff.Text = "Nhân viên";
+            this.rdbStaff.UseVisualStyleBackColor = true;
+            // 
+            // rdbUser
+            // 
+            this.rdbUser.AutoSize = true;
+            this.rdbUser.Checked = true;
+            this.rdbUser.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbUser.Location = new System.Drawing.Point(92, 3);
+            this.rdbUser.Name = "rdbUser";
+            this.rdbUser.Size = new System.Drawing.Size(72, 32);
+            this.rdbUser.TabIndex = 36;
+            this.rdbUser.TabStop = true;
+            this.rdbUser.Text = "User";
+            this.rdbUser.UseVisualStyleBackColor = true;
+            // 
+            // rdbAdmin
+            // 
+            this.rdbAdmin.AutoSize = true;
+            this.rdbAdmin.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbAdmin.Location = new System.Drawing.Point(92, 39);
+            this.rdbAdmin.Name = "rdbAdmin";
+            this.rdbAdmin.Size = new System.Drawing.Size(91, 32);
+            this.rdbAdmin.TabIndex = 37;
+            this.rdbAdmin.Text = "Admin";
+            this.rdbAdmin.UseVisualStyleBackColor = true;
+            // 
+            // rdbMarried
+            // 
+            this.rdbMarried.AutoSize = true;
+            this.rdbMarried.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbMarried.Location = new System.Drawing.Point(341, 10);
+            this.rdbMarried.Name = "rdbMarried";
+            this.rdbMarried.Size = new System.Drawing.Size(133, 32);
+            this.rdbMarried.TabIndex = 37;
+            this.rdbMarried.Text = "Có gia đình";
+            this.rdbMarried.UseVisualStyleBackColor = true;
+            // 
+            // rdbSingle
+            // 
+            this.rdbSingle.AutoSize = true;
+            this.rdbSingle.Checked = true;
+            this.rdbSingle.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rdbSingle.Location = new System.Drawing.Point(209, 10);
+            this.rdbSingle.Name = "rdbSingle";
+            this.rdbSingle.Size = new System.Drawing.Size(112, 32);
+            this.rdbSingle.TabIndex = 36;
+            this.rdbSingle.TabStop = true;
+            this.rdbSingle.Text = "Độc thân";
+            this.rdbSingle.UseVisualStyleBackColor = true;
+            // 
+            // ViewStaffGUI
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -543,7 +659,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.headerViewStudent);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "ViewStudentGUI";
+            this.Name = "ViewStaffGUI";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "fViewStudent";
             this.headerViewStudent.ResumeLayout(false);
@@ -557,8 +673,6 @@
             this.panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbxAvatar)).EndInit();
             this.panel3.ResumeLayout(false);
-            this.panel10.ResumeLayout(false);
-            this.panel10.PerformLayout();
             this.panel9.ResumeLayout(false);
             this.panel9.PerformLayout();
             this.panel8.ResumeLayout(false);
@@ -569,6 +683,12 @@
             this.panel6.PerformLayout();
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
+            this.panel10.ResumeLayout(false);
+            this.panel10.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -591,9 +711,6 @@
         private Bunifu.Framework.UI.BunifuFlatButton btnCancel;
         private System.Windows.Forms.PictureBox pbxAvatar;
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Panel panel10;
-        private System.Windows.Forms.TextBox txbParentPhone;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Panel panel9;
         private System.Windows.Forms.TextBox txbAddress;
         private System.Windows.Forms.Label label4;
@@ -611,5 +728,17 @@
         private System.Windows.Forms.TextBox txbName;
         private System.Windows.Forms.Label label7;
         private Bunifu.Framework.UI.BunifuDragControl bunifuDragControl1;
+        private System.Windows.Forms.Panel panel10;
+        private System.Windows.Forms.RadioButton rdbAdmin;
+        private System.Windows.Forms.RadioButton rdbUser;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.RadioButton rdbTeacher;
+        private System.Windows.Forms.RadioButton rdbStaff;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.RadioButton rdbMarried;
+        private System.Windows.Forms.RadioButton rdbSingle;
     }
 }

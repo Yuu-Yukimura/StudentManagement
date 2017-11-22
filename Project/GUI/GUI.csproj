@@ -63,6 +63,12 @@
     <Compile Include="MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ViewStaffGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewStaffGUI.Designer.cs">
+      <DependentUpon>ViewStaffGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="ViewStudentGUI.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -124,6 +130,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMainStaff.resx">
       <DependentUpon>ucMainStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewStaffGUI.resx">
+      <DependentUpon>ViewStaffGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStudentGUI.resx">
       <DependentUpon>ViewStudentGUI.cs</DependentUpon>

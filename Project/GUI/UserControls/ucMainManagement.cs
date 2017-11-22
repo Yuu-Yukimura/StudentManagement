@@ -69,12 +69,15 @@ namespace GUI.UserControls
         //
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void btnViewStaff_Click(object sender, EventArgs e)
         {
-
+            ViewStaffGUI f = new ViewStaffGUI(txbIDStaff.Text);
+            f.ShowDialog();
+            LoadStaff();
+            AddStaffBinding();
         }
 
         private void btnDeleteStaff_Click(object sender, EventArgs e)
@@ -160,7 +163,7 @@ namespace GUI.UserControls
         //Load thông tin nhân viên
         private void LoadStaff()
         {
-            dtgvListStaff.DataSource = StaffRepository.Instance.Load_ID_Name_Staff();
+            dtgvListStaff.DataSource = StaffService.Instance.GetListStaff();
             //Thay đổi width ch column Name
             DataGridViewColumn columnName = dtgvListStaff.Columns[1];
             columnName.Width = 295;
@@ -169,10 +172,15 @@ namespace GUI.UserControls
         //Liên kết thông tin nhân viên
         private void AddStaffBinding()
         {
+            txbIDStaff.DataBindings.Clear();
+            txbNameStaff.DataBindings.Clear();
+            pbxAvatarStaff.DataBindings.Clear();
             txbIDStaff.DataBindings.Add(new Binding("Text", dtgvListStaff.DataSource, "ID"));
             txbNameStaff.DataBindings.Add(new Binding("Text", dtgvListStaff.DataSource, "Name"));
+            pbxAvatarStaff.DataBindings.Add(new Binding("Image", dtgvListStaff.DataSource, "Avatar", true));
         }
 
         #endregion
+
     }
 }

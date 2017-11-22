@@ -51,7 +51,6 @@ namespace DAO
             return student;
         }
 
-
         //Hàm chỉnh sửa thông tin sinh viên theo id
         public bool UpdateStudentById(Student student)
         {
@@ -61,9 +60,9 @@ namespace DAO
         }
 
         //Hàm thêm một sinh viên vào csdl
-        public bool InsertStudent(string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public bool InsertStudent(Student student)
         {
-            int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertStudent @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", new object[] {name, avatar, sex, dateOfBirth, address, phone, parentPhone});
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertStudent @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", new object[] {student.Name, student.Avatar, student.Sex, student.DateOfBirth, student.Address, student.Phone, student.ParentPhone});
 
             return result > 0;
         }

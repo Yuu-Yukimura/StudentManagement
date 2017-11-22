@@ -36,11 +36,27 @@ namespace DAO
             return listStaff;
         }
 
-        //Hàm chỉ lấy Id và Name nhân viên từ csdl
-        public DataTable Load_ID_Name_Staff()
+        //Hàm lấy thông tin nhân viên qua id
+        public Staff LoadStaffById(int id)
         {
-            return DataProvider.Instance.ExecuteQuery("SELECT ID, Name FROM dbo.Staff");
+            Staff staff = new Staff();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetStaffById @Id", new object[] {id });
+
+            foreach (DataRow item in data.Rows)
+                staff = new Staff(item);
+
+            return staff;
         }
+
+        //Hàm sửa thông tin nhân viền từ csdl
+        public bool UpdateStaffById(Staff staff)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_UpdateStaffById @iD , @name , @avatar , @sex , @dateOfBirth , @address , @phone , @maritalStatus , @type , @admin",
+                new object[] { staff.ID, staff.Name, staff.Avatar, staff.Sex, staff.DateOfBirth, staff.Address, staff.Phone, staff.MaritalStatus, staff.Type, staff.Admin });
+            return result > 0;
+        }
+
 
     }
 }

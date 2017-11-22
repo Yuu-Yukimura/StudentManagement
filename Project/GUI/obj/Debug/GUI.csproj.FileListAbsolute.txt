@@ -24,3 +24,4 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\DTO.exe.
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.exe.config
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.ViewStaffGUI.resources

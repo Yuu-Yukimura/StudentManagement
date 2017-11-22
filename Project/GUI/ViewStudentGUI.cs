@@ -28,49 +28,28 @@ namespace GUI
 
         #region Events
         //Click vào button X
-        private void btnExitViewStudent_Click(object sender, EventArgs e)
+        private void btnExitView_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //Click vào button Hủy
-        private void btnCancelViewStudent_Click(object sender, EventArgs e)
+        private void btnCancel_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
         //Click vào button -
-        private void btnMinimizeViewStudent_Click(object sender, EventArgs e)
+        private void btnMinimizeView_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
         }
 
-        //Click vào button Sửa
-        //Sẽ lưu toàn bộ thông tin vừa chỉnh sửa vào csdl bằng id
-        private void btnEditViewStudent_Click(object sender, EventArgs e)
+        //Click vào nút Sửa
+        private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn sửa thông tin sinh viên này không ??","Xác nhận",MessageBoxButtons.OKCancel) == DialogResult.OK)
-            {
-                string name = txbNameViewStudent.Text;
-                byte[] avatar = Utility.ImageToByteArray(pbxAvatarViewStudent.Image);
-                string address = txbAddressViewStudent.Text;
-                string phone = txbPhoneViewStudent.Text;
-                string parentPhone = txbParentPhoneViewStudent.Text;
-                Boolean sex = ConvertSexToBoolean();
-                DateTime dateOfBirth = dtpkDateOfBirthViewStudent.Value.Date;
-
-                Student student = new Student(ID, name, avatar, sex, dateOfBirth, address, phone, parentPhone);
-
-                if (StudentService.Instance.EditStudentByID(student))
-                {
-                    MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK);
-                }
-                else
-                {
-                    MessageBox.Show("Sửa thông tin không thành công", "Thông báo", MessageBoxButtons.OK);
-                }
-            }
-
+            if (MessageBox.Show("Bạn có muốn sửa thông tin sinh viên này không ??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+                EditView();
         }
 
         //Khi Click vào ảnh sẽ hiện cửa sổ chọn ảnh
@@ -81,51 +60,77 @@ namespace GUI
             dialog.Filter = "JPG Files| *.jpg";
             if (dialog.ShowDialog() == DialogResult.OK )
             {
-                pbxAvatarViewStudent.Image = Image.FromFile(dialog.FileName);
+                pbxAvatar.Image = Image.FromFile(dialog.FileName);
             }
         }
 
         #endregion
 
-        #region Method
+        #region Methods
+
+        //Hàm edit student
+        private void EditView()
+        {
+            string name = txbName.Text;
+            byte[] avatar = Utility.ImageToByteArray(pbxAvatar.Image);
+            string address = txbAddress.Text;
+            string phone = txbPhone.Text;
+            string parentPhone = txbParentPhone.Text;
+            Boolean sex = ConvertSexToBoolean();
+            DateTime dateOfBirth = dtpkDateOfBirth.Value.Date;
+
+            Student student = new Student(ID, name, avatar, sex, dateOfBirth, address, phone, parentPhone);
+
+            if (StudentService.Instance.EditStudentByID(student))
+            {
+                MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK);
+            }
+            else
+            {
+                MessageBox.Show("Sửa thông tin không thành công", "Thông báo", MessageBoxButtons.OK);
+            }
+        }
 
         //Load thông tin sinh viên có id = id lên các controls
         private void LoadView()
         {
             Student student = StudentService.Instance.GetStudentByID(ID);
             // Tiêu đề
-            lbHeadlineViewStudent.Text += student.Name;
+            lbHeadline.Text += student.Name;
             // Tên
-            txbNameViewStudent.Text = student.Name;
+            txbName.Text = student.Name;
             // Địa chỉ
-            txbAddressViewStudent.Text = student.Address;
+            txbAddress.Text = student.Address;
             // Phone
-            txbPhoneViewStudent.Text = student.Phone;
+            txbPhone.Text = student.Phone;
             // Sdt phụ huynh
-            txbParentPhoneViewStudent.Text = student.ParentPhone;
+            txbParentPhone.Text = student.ParentPhone;
             // load ảnh bằng cách covert từ mảng byte -> ảnh
-            pbxAvatarViewStudent.Image = Utility.ByteArrayToImage(student.Avatar);
+            pbxAvatar.Image = Utility.ByteArrayToImage(student.Avatar);
             // Giới tính
             if (student.Sex)
-                rdbMaleViewStudent.Checked = true;
+                rdbMale.Checked = true;
             else
-                rdbFemaleViewStudent.Checked = true;
+                rdbFemale.Checked = true;
 
             // Ngày sinh
-            dtpkDateOfBirthViewStudent.Value = student.DateOfBirth;
+            dtpkDateOfBirth.Value = student.DateOfBirth;
 
         }
 
         //Covert từ sex sang boolean
         private Boolean ConvertSexToBoolean()
         {
-            if (rdbMaleViewStudent.Checked == true)
+            if (rdbMale.Checked == true)
                 return true;
             return false;
         }
 
-        #endregion
 
+
+
+
+        #endregion
 
     }
 }

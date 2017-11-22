@@ -39,9 +39,9 @@ namespace BUS
         }
 
         //Thêm sinh viên
-        public bool AddStudent(string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public bool AddStudent(Student student)
         {
-            return StudentRepository.Instance.InsertStudent(name, avatar, sex, dateOfBirth, address, phone, parentPhone);
+            return StudentRepository.Instance.InsertStudent(student);
         }
 
         //Xóa sinh viên

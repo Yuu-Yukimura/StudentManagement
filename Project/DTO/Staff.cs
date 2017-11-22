@@ -72,6 +72,19 @@ namespace DTO
             this.Admin = admin;
         }
 
+        public Staff(string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, Boolean maritalStatus, Boolean type, Boolean admin)
+        {
+            this.Name = name;
+            this.Avatar = avatar;
+            this.Sex = sex;
+            this.DateOfBirth = dateOfBirth;
+            this.Address = address;
+            this.Phone = phone;
+            this.MaritalStatus = maritalStatus;
+            this.Type = type;
+            this.Admin = admin;
+        }
+
         public Staff(DataRow row)
         {
             this.ID = (int)row["id"];
@@ -79,7 +92,7 @@ namespace DTO
             this.Avatar = (byte[])row["avatar"];
             this.Sex = (Boolean)row["sex"];
             this.DateOfBirth = (DateTime)row["dateOfBirth"];
-            this.Address = row["andress"].ToString();
+            this.Address = row["address"].ToString();
             this.Phone = row["phone"].ToString();
             this.MaritalStatus = (Boolean)row["maritalStatus"];
             this.Type = (Boolean)row["type"];

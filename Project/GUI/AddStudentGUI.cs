@@ -9,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
@@ -79,7 +80,9 @@ namespace GUI
                     Boolean sex = Utility.ConvertSexToBoolean(rdbMaleAddStudent);
                     DateTime dateOfBirth = dtpkDateOfBirthAddStudent.Value.Date;
 
-                    if (StudentService.Instance.AddStudent(name, avatar, sex, dateOfBirth, address, phone, parentPhone))
+                    Student student = new Student(name, avatar, sex, dateOfBirth, address, phone, parentPhone);
+
+                    if (StudentService.Instance.AddStudent(student))
                     {
                         MessageBox.Show("Thêm sinh viên thành công", "Thông báo", MessageBoxButtons.OK);
                     }

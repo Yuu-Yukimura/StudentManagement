@@ -382,6 +382,7 @@
             this.btnAddStaff.TabIndex = 35;
             this.btnAddStaff.Text = "Thêm";
             this.btnAddStaff.UseVisualStyleBackColor = false;
+            this.btnAddStaff.Click += new System.EventHandler(this.btnAddStaff_Click);
             // 
             // btnViewStaff
             // 
@@ -392,6 +393,7 @@
             this.btnViewStaff.TabIndex = 36;
             this.btnViewStaff.Text = "Xem";
             this.btnViewStaff.UseVisualStyleBackColor = false;
+            this.btnViewStaff.Click += new System.EventHandler(this.btnViewStaff_Click);
             // 
             // btnDeleteStaff
             // 
@@ -402,6 +404,7 @@
             this.btnDeleteStaff.TabIndex = 37;
             this.btnDeleteStaff.Text = "Xóa";
             this.btnDeleteStaff.UseVisualStyleBackColor = false;
+            this.btnDeleteStaff.Click += new System.EventHandler(this.btnDeleteStaff_Click);
             // 
             // panel10
             // 
@@ -652,6 +655,7 @@
             this.btnAddSubject.TabIndex = 35;
             this.btnAddSubject.Text = "Thêm";
             this.btnAddSubject.UseVisualStyleBackColor = false;
+            this.btnAddSubject.Click += new System.EventHandler(this.btnAddSubject_Click);
             // 
             // btnEditSubject
             // 
@@ -662,6 +666,7 @@
             this.btnEditSubject.TabIndex = 36;
             this.btnEditSubject.Text = "Sửa";
             this.btnEditSubject.UseVisualStyleBackColor = false;
+            this.btnEditSubject.Click += new System.EventHandler(this.btnEditSubject_Click);
             // 
             // btnDeleteSubject
             // 
@@ -672,6 +677,7 @@
             this.btnDeleteSubject.TabIndex = 37;
             this.btnDeleteSubject.Text = "Xóa";
             this.btnDeleteSubject.UseVisualStyleBackColor = false;
+            this.btnDeleteSubject.Click += new System.EventHandler(this.btnDeleteSubject_Click);
             // 
             // panel11
             // 
@@ -758,6 +764,7 @@
             this.btnAddClass.TabIndex = 35;
             this.btnAddClass.Text = "Thêm";
             this.btnAddClass.UseVisualStyleBackColor = false;
+            this.btnAddClass.Click += new System.EventHandler(this.btnAddClass_Click);
             // 
             // btnViewClass
             // 
@@ -768,6 +775,7 @@
             this.btnViewClass.TabIndex = 36;
             this.btnViewClass.Text = "Xem";
             this.btnViewClass.UseVisualStyleBackColor = false;
+            this.btnViewClass.Click += new System.EventHandler(this.btnViewClass_Click);
             // 
             // btnDeleteClass
             // 
@@ -778,6 +786,7 @@
             this.btnDeleteClass.TabIndex = 37;
             this.btnDeleteClass.Text = "Xóa";
             this.btnDeleteClass.UseVisualStyleBackColor = false;
+            this.btnDeleteClass.Click += new System.EventHandler(this.btnDeleteClass_Click);
             // 
             // panel22
             // 
