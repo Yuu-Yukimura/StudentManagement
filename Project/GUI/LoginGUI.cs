@@ -72,7 +72,7 @@ namespace GUI
         // Hàm xử lý đẳng nhập
         private bool Login(string userName, string passWord)
         {
-            return AccountDAO.Instance.Login(userName, passWord);
+            return AccountRepository.Instance.Login(userName, passWord);
         }
 
 

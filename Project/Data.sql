@@ -464,3 +464,4 @@ BEGIN
 				 VALUES(@Name, @Avatar, @Sex, @DateOfBirth, @Address, @Phone, @ParentPhone)
 END
 GO
+

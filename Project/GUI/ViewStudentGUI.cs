@@ -1,5 +1,6 @@
 ﻿using System;
 using DAO;
+using BUS;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -8,6 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using DTO;
 
 namespace GUI
 {
@@ -57,7 +59,9 @@ namespace GUI
                 Boolean sex = ConvertSexToBoolean();
                 DateTime dateOfBirth = dtpkDateOfBirthViewStudent.Value.Date;
 
-                if (StudentDAO.Instance.EditStudentById(ID, name, avatar, sex, dateOfBirth, address, phone, parentPhone))
+                Student student = new Student(ID, name, avatar, sex, dateOfBirth, address, phone, parentPhone);
+
+                if (StudentService.Instance.EditStudentByID(student))
                 {
                     MessageBox.Show("Sửa thông tin thành công", "Thông báo", MessageBoxButtons.OK);
                 }
@@ -88,27 +92,27 @@ namespace GUI
         //Load thông tin sinh viên có id = id lên các controls
         private void LoadView()
         {
-            DataTable data = StudentDAO.Instance.LoadStudentById(ID);
+            Student student = StudentService.Instance.GetStudentByID(ID);
             // Tiêu đề
-            lbHeadlineViewStudent.Text += data.Rows[0]["Name"].ToString();
+            lbHeadlineViewStudent.Text += student.Name;
             // Tên
-            txbNameViewStudent.Text = data.Rows[0]["Name"].ToString();
+            txbNameViewStudent.Text = student.Name;
             // Địa chỉ
-            txbAddressViewStudent.Text = data.Rows[0]["Address"].ToString();
+            txbAddressViewStudent.Text = student.Address;
             // Phone
-            txbPhoneViewStudent.Text = data.Rows[0]["Phone"].ToString();
+            txbPhoneViewStudent.Text = student.Phone;
             // Sdt phụ huynh
-            txbParentPhoneViewStudent.Text = data.Rows[0]["ParentPhone"].ToString();
+            txbParentPhoneViewStudent.Text = student.ParentPhone;
             // load ảnh bằng cách covert từ mảng byte -> ảnh
-            pbxAvatarViewStudent.Image = Utility.ByteArrayToImage((byte[])(data.Rows[0]["Avatar"]));
+            pbxAvatarViewStudent.Image = Utility.ByteArrayToImage(student.Avatar);
             // Giới tính
-            if (data.Rows[0]["Sex"].ToString() == "True")
+            if (student.Sex)
                 rdbMaleViewStudent.Checked = true;
             else
                 rdbFemaleViewStudent.Checked = true;
 
             // Ngày sinh
-            dtpkDateOfBirthViewStudent.Text = data.Rows[0]["DateOfBirth"].ToString();
+            dtpkDateOfBirthViewStudent.Value = student.DateOfBirth;
 
         }
 

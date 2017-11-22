@@ -1,5 +1,6 @@
 ﻿using System;
 using DAO;
+using BUS;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -78,7 +79,7 @@ namespace GUI
                     Boolean sex = Utility.ConvertSexToBoolean(rdbMaleAddStudent);
                     DateTime dateOfBirth = dtpkDateOfBirthAddStudent.Value.Date;
 
-                    if (StudentDAO.Instance.InsertStudent(name, avatar, sex, dateOfBirth, address, phone, parentPhone))
+                    if (StudentService.Instance.AddStudent(name, avatar, sex, dateOfBirth, address, phone, parentPhone))
                     {
                         MessageBox.Show("Thêm sinh viên thành công", "Thông báo", MessageBoxButtons.OK);
                     }

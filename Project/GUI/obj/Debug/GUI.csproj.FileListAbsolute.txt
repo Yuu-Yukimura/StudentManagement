@@ -18,3 +18,9 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.UserControls.ucMainHome.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.UserControls.ucMainStaff.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\DTO.exe
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\DTO.pdb
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\DTO.exe.config
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.exe
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.pdb
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\bin\Debug\BUS.exe.config

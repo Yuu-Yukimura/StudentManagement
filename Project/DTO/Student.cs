@@ -61,5 +61,28 @@ namespace DTO
             this.ParentPhone = parentPhone;
         }
 
+        public Student(string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        {
+            this.Name = name;
+            this.Avatar = avatar;
+            this.Sex = sex;
+            this.DateOfBirth = dateOfBirth;
+            this.Address = address;
+            this.Phone = phone;
+            this.ParentPhone = parentPhone;
+        }
+
+        public Student(DataRow row)
+        {
+            this.ID = (int)row["id"];
+            this.Name = row["name"].ToString();
+            this.Avatar = (byte[])row["avatar"];
+            this.Sex = (Boolean)row["sex"];
+            this.DateOfBirth = (DateTime)row["dateOfBirth"];
+            this.Address = row["address"].ToString();
+            this.Phone = row["phone"].ToString();
+            this.ParentPhone = row["parentPhone"].ToString();
+        }
+
     }
 }

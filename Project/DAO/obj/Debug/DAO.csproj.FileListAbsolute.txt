@@ -5,10 +5,7 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\obj\Debug\DAO.cspr
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DAO.exe.config
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DAO.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DAO.pdb
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\BUS.exe
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DTO.exe
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\BUS.pdb
-D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\BUS.exe.config
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DTO.pdb
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\bin\Debug\DTO.exe.config
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\DAO\obj\Debug\DAO.exe

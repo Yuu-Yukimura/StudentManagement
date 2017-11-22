@@ -8,20 +8,20 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class StaffDAO
+    public class StaffRepository
     {
-        private static StaffDAO instance;
+        private static StaffRepository instance;
 
-        public static StaffDAO Instance
+        public static StaffRepository Instance
         {
-            get { if (instance == null) instance = new StaffDAO(); return instance; }
+            get { if (instance == null) instance = new StaffRepository(); return instance; }
             private set { instance = value; }
         }
 
-        private StaffDAO() { }
+        private StaffRepository() { }
 
         //Hàm lấy tất cả thông tin nhân viên từ csdl
-        /*public List<Staff> LoadStaffList()
+        public List<Staff> LoadStaffList()
         {
             List<Staff> listStaff = new List<Staff>();
 
@@ -34,7 +34,7 @@ namespace DAO
             }
 
             return listStaff;
-        }*/
+        }
 
         //Hàm chỉ lấy Id và Name nhân viên từ csdl
         public DataTable Load_ID_Name_Staff()

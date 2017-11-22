@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using BUS;
 using DAO;
 
 namespace GUI.UserControls
@@ -49,7 +50,7 @@ namespace GUI.UserControls
         {
             if (MessageBox.Show("Bạn thật sự có muốn xóa sinh viên này ko ??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (StudentDAO.Instance.DeleteStudent(int.Parse(txbIDStudent.Text)))
+                if (StudentRepository.Instance.DeleteStudent(int.Parse(txbIDStudent.Text)))
                 {
                     MessageBox.Show("Đã xóa thành công sinh viên", "Thông báo");
                     LoadStudent();
@@ -139,7 +140,7 @@ namespace GUI.UserControls
         //Load thông tin sinh viên
         private void LoadStudent()
         {
-            dtgvListStudent.DataSource = StudentDAO.Instance.Load_ID_Name_Avatar_Student();
+            dtgvListStudent.DataSource = StudentService.Instance.GetStudentList();
             //Thay đổi width cho column Name
             DataGridViewColumn columnName = dtgvListStudent.Columns[1];
             columnName.Width = 300;
@@ -159,7 +160,7 @@ namespace GUI.UserControls
         //Load thông tin nhân viên
         private void LoadStaff()
         {
-            dtgvListStaff.DataSource = StaffDAO.Instance.Load_ID_Name_Staff();
+            dtgvListStaff.DataSource = StaffRepository.Instance.Load_ID_Name_Staff();
             //Thay đổi width ch column Name
             DataGridViewColumn columnName = dtgvListStaff.Columns[1];
             columnName.Width = 295;

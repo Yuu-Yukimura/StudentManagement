@@ -9,19 +9,19 @@ using DTO;
 
 namespace DAO
 {
-    public class StudentDAO
+    public class StudentRepository
     {
-        private static StudentDAO instance;
+        private static StudentRepository instance;
 
-        public static StudentDAO Instance {
-            get { if (instance == null) instance = new StudentDAO(); return instance; }
+        public static StudentRepository Instance {
+            get { if (instance == null) instance = new StudentRepository(); return instance; }
             private set { instance = value; }
         }
 
-        private StudentDAO() { }
+        private StudentRepository() { }
 
-        //Hàm lấy tất cả thông tin sinh viên từ csdl
-        /*public List<Student> LoadStudentList()
+        //Hàm lấy tất cả thông tin sinh viên từ csdl và trả ra một list
+        public List<Student> LoadStudentList()
         {
             List<Student> studentList = new List<Student>();
 
@@ -34,25 +34,29 @@ namespace DAO
             }
 
             return studentList;
-        }*/
-
-        //Hàm chỉ lấy Id và Name sinh viên từ csdl
-        public DataTable Load_ID_Name_Avatar_Student()
-        {
-            return DataProvider.Instance.ExecuteQuery("SELECT ID, Name, Avatar FROM dbo.Student");
         }
 
-        //Hàm chỉ lấy sinh viên theo id
-        public DataTable LoadStudentById(int id)
+        //Hàm chỉ lấy sinh viên theo id và trả ra Student
+        public Student LoadStudentById(int id)
         {
-            return DataProvider.Instance.ExecuteQuery("USP_ViewStudentByID @iD", new object[] {id });
+            Student student = new Student();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_ViewStudentByID @iD", new object[] { id });
+
+            foreach (DataRow item in data.Rows)
+            {
+                student = new Student(item);
+            }
+
+            return student;
         }
+
 
         //Hàm chỉnh sửa thông tin sinh viên theo id
-        public bool EditStudentById(int id, string name, byte[] avatar, Boolean sex, DateTime dateOfBirth, string address, string phone, string parentPhone)
+        public bool UpdateStudentById(Student student)
         {
             int result = DataProvider.Instance.ExecuteNonQuery("USP_EditStudentByID @iD , @Name , @Avatar , @Sex , @DateOfBirth , @Address , @Phone , @ParentPhone ", 
-                                                            new object[] {id, name, avatar, sex, dateOfBirth, address, phone, parentPhone });
+                                                            new object[] {student.ID, student.Name, student.Avatar, student.Sex, student.DateOfBirth, student.DateOfBirth, student.Phone, student.ParentPhone });
             return result > 0;
         }
 

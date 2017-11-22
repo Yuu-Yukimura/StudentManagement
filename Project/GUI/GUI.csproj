@@ -160,9 +160,17 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BUS\BUS.csproj">
+      <Project>{130063d0-50e7-4aad-98ec-018467476792}</Project>
+      <Name>BUS</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DAO\DAO.csproj">
-      <Project>{06362886-923A-4337-9CE9-B155033D18F3}</Project>
+      <Project>{06362886-923a-4337-9ce9-b155033d18f3}</Project>
       <Name>DAO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DTO\DTO.csproj">
+      <Project>{9c795e80-15dd-456d-aa3b-9a4a314089d9}</Project>
+      <Name>DTO</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

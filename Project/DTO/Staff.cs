@@ -72,5 +72,19 @@ namespace DTO
             this.Admin = admin;
         }
 
+        public Staff(DataRow row)
+        {
+            this.ID = (int)row["id"];
+            this.Name = row["name"].ToString();
+            this.Avatar = (byte[])row["avatar"];
+            this.Sex = (Boolean)row["sex"];
+            this.DateOfBirth = (DateTime)row["dateOfBirth"];
+            this.Address = row["andress"].ToString();
+            this.Phone = row["phone"].ToString();
+            this.MaritalStatus = (Boolean)row["maritalStatus"];
+            this.Type = (Boolean)row["type"];
+            this.Admin = (Boolean)row["administrator"];
+        }
+
     }
 }

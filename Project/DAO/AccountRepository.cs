@@ -7,17 +7,17 @@ using System.Threading.Tasks;
 
 namespace DAO
 {
-    public class AccountDAO
+    public class AccountRepository
     {
-        private static AccountDAO instance;
+        private static AccountRepository instance;
 
-        public static AccountDAO Instance
+        public static AccountRepository Instance
         {
-            get { if (instance == null) instance = new AccountDAO();  return instance; }
+            get { if (instance == null) instance = new AccountRepository();  return instance; }
             private set { instance = value; }
         }
 
-        private AccountDAO() { }
+        private AccountRepository() { }
 
         public bool Login(string userName, string passWord)
         {
