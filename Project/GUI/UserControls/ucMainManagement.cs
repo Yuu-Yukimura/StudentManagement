@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUS;
-using DAO;
+using DTO;
 
 namespace GUI.UserControls
 {
@@ -50,7 +50,7 @@ namespace GUI.UserControls
         {
             if (MessageBox.Show("Bạn thật sự có muốn xóa sinh viên này ko ??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
             {
-                if (StudentRepository.Instance.DeleteStudent(int.Parse(txbIDStudent.Text)))
+                if (StudentService.Instance.DeleteStudent(int.Parse(txbIDStudent.Text)))
                 {
                     MessageBox.Show("Đã xóa thành công sinh viên", "Thông báo");
                     LoadStudent();
@@ -69,7 +69,10 @@ namespace GUI.UserControls
         //
         private void btnAddStaff_Click(object sender, EventArgs e)
         {
-            
+            AddStaffGUI f = new AddStaffGUI();
+            f.ShowDialog();
+            LoadStaff();
+            AddStaffBinding();
         }
 
         private void btnViewStaff_Click(object sender, EventArgs e)
@@ -82,7 +85,18 @@ namespace GUI.UserControls
 
         private void btnDeleteStaff_Click(object sender, EventArgs e)
         {
+            if (MessageBox.Show("Bạn thật sự có muốn xóa nhân viên này ko ??", "Xác nhận", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (StaffService.Instance.DeleteAccountAndStaff(int.Parse(txbIDStaff.Text)))
+                {
+                    MessageBox.Show("Đã xóa thành công nhân viên và tài khoản của nhân viên.", "Thông báo");
+                    LoadStudent();
+                    AddStudentBinding();
+                }
+                else
+                    MessageBox.Show("xóa không thành công", "Thông báo");
 
+            }
         }
         #endregion
 
@@ -92,12 +106,32 @@ namespace GUI.UserControls
         //
         private void btnAddSubject_Click(object sender, EventArgs e)
         {
-
+            AddSubjectGUI f = new AddSubjectGUI();
+            f.ShowDialog();
+            LoadSubject();
+            AddSubjectBinding();
         }
 
         private void btnEditSubject_Click(object sender, EventArgs e)
         {
-
+            if(MessageBox.Show("Bạn có muốn sửa môn học này không","Thông báo",MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                int id = int.Parse(txbIDSubject.Text);
+                string name = txbNameSubject.Text;
+                decimal money = decimal.Parse(txbMoneySubject.Text);
+                Subject subject = new Subject(id, name, money);
+                if(SubjectService.Instance.EditSubjectById(subject))
+                {
+                    MessageBox.Show("Bạn đã sửa môn học thành công", "Thông báo", MessageBoxButtons.OK);
+                    LoadSubject();
+                    AddSubjectBinding();
+                }
+                else
+                {
+                    MessageBox.Show("Bạn đã sửa môn học không thành công", "Thông báo", MessageBoxButtons.OK);
+                }
+            }
+            
         }
 
         private void btnDeleteSubject_Click(object sender, EventArgs e)
@@ -113,7 +147,10 @@ namespace GUI.UserControls
         //
         private void btnAddClass_Click(object sender, EventArgs e)
         {
-
+            AddClassGUI f = new AddClassGUI();
+            f.ShowDialog();
+            LoadClass();
+            AddClassBinding();
         }
 
         private void btnViewClass_Click(object sender, EventArgs e)
@@ -138,6 +175,10 @@ namespace GUI.UserControls
             AddStudentBinding();
             LoadStaff();
             AddStaffBinding();
+            LoadSubject();
+            AddSubjectBinding();
+            LoadClass();
+            AddClassBinding();
         }
 
         //Load thông tin sinh viên
@@ -164,7 +205,7 @@ namespace GUI.UserControls
         private void LoadStaff()
         {
             dtgvListStaff.DataSource = StaffService.Instance.GetListStaff();
-            //Thay đổi width ch column Name
+            //Thay đổi width cho column Name
             DataGridViewColumn columnName = dtgvListStaff.Columns[1];
             columnName.Width = 295;
         }
@@ -178,6 +219,50 @@ namespace GUI.UserControls
             txbIDStaff.DataBindings.Add(new Binding("Text", dtgvListStaff.DataSource, "ID"));
             txbNameStaff.DataBindings.Add(new Binding("Text", dtgvListStaff.DataSource, "Name"));
             pbxAvatarStaff.DataBindings.Add(new Binding("Image", dtgvListStaff.DataSource, "Avatar", true));
+        }
+
+        //Load thông tin subject
+        private void LoadSubject()
+        {
+            dtgvListSubject.DataSource = SubjectService.Instance.GetListSubject();
+            //Thay đổi width cho column Name
+            DataGridViewColumn columnName = dtgvListSubject.Columns[1];
+            columnName.Width = 295;
+        }
+
+        //Liên kết thông tin môn học
+        private void AddSubjectBinding()
+        {
+            txbIDSubject.DataBindings.Clear();
+            txbNameSubject.DataBindings.Clear();
+            txbMoneySubject.DataBindings.Clear();
+            txbIDSubject.DataBindings.Add(new Binding("Text", dtgvListSubject.DataSource, "ID"));
+            txbNameSubject.DataBindings.Add(new Binding("Text", dtgvListSubject.DataSource, "Name"));
+            txbMoneySubject.DataBindings.Add(new Binding("Text", dtgvListSubject.DataSource, "Money"));
+        }
+
+        //Load thông tin Class
+        private void LoadClass()
+        {
+            dtgvListClass.DataSource = ClassService.Instance.GetSubjectStaffNameByClass();
+            //Thay đổi width cho column Name
+            DataGridViewColumn columnName = dtgvListClass.Columns[1];
+            columnName.Width = 295;
+        }
+
+        //Liên kết thông tin lớp học
+        private void AddClassBinding()
+        {
+            txbIDClass.DataBindings.Clear();
+            txbNameClass.DataBindings.Clear();
+            txbSubjectClass.DataBindings.Clear();
+            txbStatusClass.DataBindings.Clear();
+            txbStaffClass.DataBindings.Clear();
+            txbIDClass.DataBindings.Add(new Binding("Text", dtgvListClass.DataSource, "Mã môn học"));
+            txbNameClass.DataBindings.Add(new Binding("Text", dtgvListClass.DataSource, "Tên lớp"));
+            txbSubjectClass.DataBindings.Add(new Binding("Text", dtgvListClass.DataSource, "Tên môn học"));
+            txbStatusClass.DataBindings.Add(new Binding("Text", dtgvListClass.DataSource, "Status"));
+            txbStaffClass.DataBindings.Add(new Binding("Text", dtgvListClass.DataSource, "Tên giảng viên"));
         }
 
         #endregion

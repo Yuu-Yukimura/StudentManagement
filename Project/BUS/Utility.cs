@@ -52,13 +52,25 @@ namespace BUS
         /// </summary>
         /// <param name="radioButton"></param>
         /// <returns></returns>
-        public static Boolean ConvertSexToBoolean(RadioButton radioButton)
+        public static bool ConvertSexToBoolean(RadioButton radioButton)
         {
             if (radioButton.Checked == true)
                 return true;
             return false;
         }
 
+        /// <summary>
+        /// Ktra trong textBox có phải là số ko ?
+        /// </summary>
+        /// <param name="textBox"></param>
+        /// <returns></returns>
+        public static bool CheckNumberTextBox(TextBox textBox)
+        {
+            long num;
+            if (Int64.TryParse(textBox.Text, out num))
+                return true;
+            return false;
+        }
 
     }
 }

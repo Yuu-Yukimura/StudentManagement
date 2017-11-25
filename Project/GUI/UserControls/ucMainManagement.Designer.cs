@@ -85,6 +85,7 @@
             this.btnSearchSubject = new System.Windows.Forms.Button();
             this.txbSearchSubject = new System.Windows.Forms.TextBox();
             this.panel6 = new System.Windows.Forms.Panel();
+            this.dtgvListSubject = new System.Windows.Forms.DataGridView();
             this.lvSubject = new System.Windows.Forms.ListView();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.panel14 = new System.Windows.Forms.Panel();
@@ -98,7 +99,7 @@
             this.txbStaffClass = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.panel20 = new System.Windows.Forms.Panel();
-            this.textSubjectClass = new System.Windows.Forms.TextBox();
+            this.txbSubjectClass = new System.Windows.Forms.TextBox();
             this.label9 = new System.Windows.Forms.Label();
             this.panel19 = new System.Windows.Forms.Panel();
             this.txbNameClass = new System.Windows.Forms.TextBox();
@@ -111,6 +112,7 @@
             this.txbSearchClass = new System.Windows.Forms.TextBox();
             this.panel7 = new System.Windows.Forms.Panel();
             this.lvClass = new System.Windows.Forms.ListView();
+            this.dtgvListClass = new System.Windows.Forms.DataGridView();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -134,6 +136,7 @@
             this.panel13.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel6.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListSubject)).BeginInit();
             this.tabPage4.SuspendLayout();
             this.panel14.SuspendLayout();
             this.panel22.SuspendLayout();
@@ -143,6 +146,7 @@
             this.panel18.SuspendLayout();
             this.panel12.SuspendLayout();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListClass)).BeginInit();
             this.SuspendLayout();
             // 
             // tabControl1
@@ -525,6 +529,7 @@
             this.dtgvListStaff.HeaderForeColor = System.Drawing.Color.SeaGreen;
             this.dtgvListStaff.Location = new System.Drawing.Point(0, 0);
             this.dtgvListStaff.Name = "dtgvListStaff";
+            this.dtgvListStaff.ReadOnly = true;
             this.dtgvListStaff.RowHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
             this.dtgvListStaff.RowTemplate.Height = 24;
             this.dtgvListStaff.Size = new System.Drawing.Size(440, 507);
@@ -710,12 +715,24 @@
             // 
             // panel6
             // 
+            this.panel6.Controls.Add(this.dtgvListSubject);
             this.panel6.Controls.Add(this.lvSubject);
             this.panel6.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel6.Location = new System.Drawing.Point(0, 0);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(440, 515);
             this.panel6.TabIndex = 1;
+            // 
+            // dtgvListSubject
+            // 
+            this.dtgvListSubject.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListSubject.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListSubject.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListSubject.Name = "dtgvListSubject";
+            this.dtgvListSubject.ReadOnly = true;
+            this.dtgvListSubject.RowTemplate.Height = 24;
+            this.dtgvListSubject.Size = new System.Drawing.Size(440, 515);
+            this.dtgvListSubject.TabIndex = 1;
             // 
             // lvSubject
             // 
@@ -844,7 +861,7 @@
             // 
             // panel20
             // 
-            this.panel20.Controls.Add(this.textSubjectClass);
+            this.panel20.Controls.Add(this.txbSubjectClass);
             this.panel20.Controls.Add(this.label9);
             this.panel20.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel20.Location = new System.Drawing.Point(443, 166);
@@ -852,13 +869,13 @@
             this.panel20.Size = new System.Drawing.Size(350, 50);
             this.panel20.TabIndex = 6;
             // 
-            // textSubjectClass
+            // txbSubjectClass
             // 
-            this.textSubjectClass.Location = new System.Drawing.Point(128, 8);
-            this.textSubjectClass.Name = "textSubjectClass";
-            this.textSubjectClass.ReadOnly = true;
-            this.textSubjectClass.Size = new System.Drawing.Size(199, 34);
-            this.textSubjectClass.TabIndex = 34;
+            this.txbSubjectClass.Location = new System.Drawing.Point(128, 8);
+            this.txbSubjectClass.Name = "txbSubjectClass";
+            this.txbSubjectClass.ReadOnly = true;
+            this.txbSubjectClass.Size = new System.Drawing.Size(199, 34);
+            this.txbSubjectClass.TabIndex = 34;
             // 
             // label9
             // 
@@ -954,6 +971,7 @@
             // 
             // panel7
             // 
+            this.panel7.Controls.Add(this.dtgvListClass);
             this.panel7.Controls.Add(this.lvClass);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel7.Location = new System.Drawing.Point(3, 3);
@@ -969,6 +987,16 @@
             this.lvClass.Size = new System.Drawing.Size(440, 509);
             this.lvClass.TabIndex = 0;
             this.lvClass.UseCompatibleStateImageBehavior = false;
+            // 
+            // dtgvListClass
+            // 
+            this.dtgvListClass.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvListClass.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dtgvListClass.Location = new System.Drawing.Point(0, 0);
+            this.dtgvListClass.Name = "dtgvListClass";
+            this.dtgvListClass.RowTemplate.Height = 24;
+            this.dtgvListClass.Size = new System.Drawing.Size(440, 509);
+            this.dtgvListClass.TabIndex = 1;
             // 
             // ucMainManagement
             // 
@@ -1009,6 +1037,7 @@
             this.panel11.ResumeLayout(false);
             this.panel11.PerformLayout();
             this.panel6.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListSubject)).EndInit();
             this.tabPage4.ResumeLayout(false);
             this.panel14.ResumeLayout(false);
             this.panel22.ResumeLayout(false);
@@ -1024,6 +1053,7 @@
             this.panel12.ResumeLayout(false);
             this.panel12.PerformLayout();
             this.panel7.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvListClass)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -1078,7 +1108,7 @@
         private System.Windows.Forms.TextBox txbStaffClass;
         private System.Windows.Forms.Label label10;
         private System.Windows.Forms.Panel panel20;
-        private System.Windows.Forms.TextBox textSubjectClass;
+        private System.Windows.Forms.TextBox txbSubjectClass;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel19;
         private System.Windows.Forms.TextBox txbNameClass;
@@ -1108,5 +1138,7 @@
         private System.Windows.Forms.Button btnSearchClass;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvListStudent;
         private Bunifu.Framework.UI.BunifuCustomDataGrid dtgvListStaff;
+        private System.Windows.Forms.DataGridView dtgvListSubject;
+        private System.Windows.Forms.DataGridView dtgvListClass;
     }
 }

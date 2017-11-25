@@ -51,11 +51,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddAccountGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddAccountGUI.Designer.cs">
+      <DependentUpon>AddAccountGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddClassGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClassGUI.Designer.cs">
+      <DependentUpon>AddClassGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddStaffGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddStaffGUI.Designer.cs">
+      <DependentUpon>AddStaffGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="AddStudentGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="AddStudentGUI.Designer.cs">
       <DependentUpon>AddStudentGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddSubjectGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddSubjectGUI.Designer.cs">
+      <DependentUpon>AddSubjectGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="MainGUI.cs">
       <SubType>Form</SubType>
@@ -119,8 +143,20 @@
     <Compile Include="UserControls\ucMainStaff.Designer.cs">
       <DependentUpon>ucMainStaff.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="AddAccountGUI.resx">
+      <DependentUpon>AddAccountGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddClassGUI.resx">
+      <DependentUpon>AddClassGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddStaffGUI.resx">
+      <DependentUpon>AddStaffGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="AddStudentGUI.resx">
       <DependentUpon>AddStudentGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddSubjectGUI.resx">
+      <DependentUpon>AddSubjectGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>

@@ -46,12 +46,13 @@ CREATE TABLE Account
 	-- INFO
 	UserName VARCHAR(50) PRIMARY KEY,
 	PassWord VARCHAR(50) NOT NULL DEFAULT '1',
-	IDStaff INT UNIQUE NOT NULL
+	IDStaff INT IDENTITY NOT NULL
 
 	-- FOREIGN
 	FOREIGN KEY (IDStaff) REFERENCES dbo.Staff(ID)
 )
 GO
+
 
 -- 3.bảng sinh viên
 CREATE TABLE Student
@@ -110,7 +111,7 @@ CREATE TABLE Class
 	-- INFO
 	ID INT PRIMARY KEY IDENTITY,
 	Name NVARCHAR(50) NOT NULL DEFAULT 'Chưa đặt tên',
-	Status INT NOT NULL DEFAULT 1, -- -1 là đã kết thúc, 0 là đang học, 1 là đang mở để đk
+	Status NVARCHAR(10) NOT NULL DEFAULT N'Đang mở', -- -1 là đã kết thúc, 0 là đang học, 1 là đang mở để đk
 	DateStart DATE NOT NULL,
 	DateEnd DATE NOT NULL,
 	IDSubject INT NOT NULL,
@@ -165,11 +166,12 @@ GO
 -- 8.bảng chi tiết lớp
 -- 9.bảng kết qua học tập
 
-
+/*
 -- 1.bảng nhân viên
 -- 1.1
-INSERT dbo.Staff ( Name, Avatar, Sex, DateOfBirth, Address, Phone, MaritalStatus, Type, Administrator)
-		   VALUES(N'Nguyễn Hoàng Quang Duy', null, 1, '19971010', N'Láng Cát', '0981333793', 1, 0, 1 )
+INSERT dbo.Staff ( Name,  Sex, DateOfBirth, Address, Phone, MaritalStatus, Type, Administrator)
+		   VALUES(N'Nguyễn Hoàng Quang Duy',  1, '19971010', N'Láng Cát', '0981333793', 1, 0, 1 )
+		   
 -- 1.2
 INSERT dbo.Staff ( Name, Avatar, Sex, DateOfBirth, Address, Phone, MaritalStatus, Type, Administrator)
 		   VALUES(N'Hoàng Nhật Phong', null, 1, '19971015', N'Long Hải, Long Điền, Bà Rịa - Vũng Tàu', '333666999', 0, 0, 1 )
@@ -185,21 +187,23 @@ INSERT dbo.Staff ( Name, Avatar, Sex, DateOfBirth, Address, Phone, MaritalStatus
 GO
 -- 2.bảng tài khoản
 -- 2.1
-INSERT dbo.Account (UserName, PassWord, IDStaff)
-		     VALUES('1','1',1)
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('1','1')
+			 
 -- 2.2
-INSERT dbo.Account (UserName, PassWord, IDStaff)
-		     VALUES('novaghoul','1',2)
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('novaghoul','1')
 -- 2.3
-INSERT dbo.Account (UserName, PassWord, IDStaff)
-		     VALUES('an','1',3)
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('an','1')
 -- 2.4
-INSERT dbo.Account (UserName, PassWord, IDStaff)
-		     VALUES('ngoc','1',4)
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('ngoc','1')
 -- 2.5
-INSERT dbo.Account (UserName, PassWord, IDStaff)
-		     VALUES('yen','1',5)
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('yen','1')
 GO
+
 -- 3.bảng sinh viên
 -- 3.1
 INSERT dbo.Student (Name, Avatar, Sex, DateOfBirth, Address, Phone, ParentPhone)
@@ -231,7 +235,8 @@ INSERT dbo.Student (Name, Avatar, Sex, DateOfBirth, Address, Phone, ParentPhone)
 -- 3.10
 INSERT dbo.Student (Name, Avatar, Sex, DateOfBirth, Address, Phone, ParentPhone)
 		     VALUES(N'Dorand Thump', null, 1, '19990101', N'USA', '1002601428', '1002361594')
-GO
+GO*/
+/*
 -- 4.bảng công nợ
 -- 4.1
 INSERT dbo.Debt (SumOfDebt, IDStudent)
@@ -264,6 +269,7 @@ INSERT dbo.Debt (SumOfDebt, IDStudent)
 INSERT dbo.Debt (SumOfDebt, IDStudent)
 		  VALUES(0, 10)
 GO
+*/
 -- 5.bảng chi tiết nợ
 
 
@@ -486,7 +492,7 @@ END
 GO
 
 -- Sửa thông tin nhân viên qua id
-CREATE PROC UpdateStaffById
+CREATE PROC USP_UpdateStaffById
 @iD INT, @name NVARCHAR(50), @avatar VARBINARY(MAX), @sex BIT, @dateOfBirth DATE, @address NVARCHAR(50), @phone VARCHAR(20), @maritalStatus BIT, @type BIT, @admin BIT
 AS
 BEGIN
@@ -494,3 +500,102 @@ BEGIN
 	WHERE ID = @iD
 END
 GO
+
+
+-- Thêm Account vào csdl
+CREATE PROC USP_InsertAccount
+@userName VARCHAR(50), @passWord VARCHAR(50)
+AS
+BEGIN
+	INSERT dbo.Account (UserName, PassWord)
+		     VALUES(@userName, @passWord)
+END
+GO
+
+-- Xóa Staff
+CREATE PROC USP_DeleteStaff
+@id INT
+AS
+BEGIN
+	DELETE dbo.Staff WHERE ID = @id
+END
+GO
+
+-- Xóa Account
+CREATE PROC USP_DeleteAccount
+@idStaff INT
+AS
+BEGIN
+	DELETE dbo.Account WHERE IDStaff = @idStaff
+END
+GO
+
+-- Lấy toàn bộ thông tin môn học
+CREATE PROC USP_LoadListSubject
+AS
+BEGIN
+	SELECT * FROM dbo.Subject
+END
+GO
+
+-- thêm 1 môn học vào csdl
+CREATE PROC USP_InsertSubject
+@name NVARCHAR(50), @money MONEY
+AS
+BEGIN
+	INSERT dbo.Subject (Name, Money)
+				 VALUES(@name, @money)
+END
+GO
+
+-- Sửa 1 môn học
+CREATE PROC USP_UpdateSubjectByID
+@id INT, @name NVARCHAR(50), @money MONEY
+AS
+BEGIN
+	UPDATE dbo.Subject SET Name = @name, Money = @money WHERE ID = @id
+END
+GO
+
+-- xóa 1 môn học 
+CREATE PROC USP_DeleteSubject
+@id INT
+AS
+BEGIN
+	DELETE dbo.Subject WHERE ID = @id
+END
+GO
+
+-- Load Class
+CREATE PROC USP_LoadListClass
+AS SELECT * FROM dbo.Class
+GO
+
+-- thêm Class 
+CREATE PROC USP_InsertClass
+@name NVARCHAR(50), @status NVARCHAR(10), @dateStart DATETIME, @dateEnd DATETIME, @idSubject INT, @idStaff INT 
+AS
+BEGIN
+	INSERT dbo.Class (Name, Status, DateStart, DateEnd, IDSubject, IDStaff)
+			   VALUES(@name, @status, @dateStart, @dateEnd, @idSubject, @idStaff)
+END
+GO
+
+
+-- Lấy tên gv và tên môn học theo lớp 
+CREATE PROC USP_LoadSubjectStaffNameByClass
+AS
+BEGIN
+	SELECT Class.ID AS [Mã môn học], Class.Name AS [Tên lớp], Subject.Name AS [Tên môn học], Staff.Name AS [Tên giảng viên], status
+	FROM dbo.Class, dbo.Subject, dbo.Staff
+	WHERE IDSubject = Subject.ID AND IDStaff = Staff.ID
+END
+GO
+
+
+INSERT dbo.Staff ( Name,  Sex, DateOfBirth, Address, Phone, MaritalStatus, Type, Administrator)
+		   VALUES(N'Nguyễn Hoàng Quang Duy',  1, '19971010', N'Láng Cát', '0981333793', 1, 0, 1 )
+INSERT dbo.Account (UserName, PassWord)
+		     VALUES('1','1')
+
+

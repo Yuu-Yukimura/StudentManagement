@@ -27,7 +27,7 @@ namespace DAO
 
             DataTable data = DataProvider.Instance.ExecuteQuery("USP_LoadStaffList");
 
-            foreach(DataRow item in data.Rows)
+            foreach (DataRow item in data.Rows)
             {
                 Staff staff = new Staff(item);
                 listStaff.Add(staff);
@@ -41,7 +41,7 @@ namespace DAO
         {
             Staff staff = new Staff();
 
-            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetStaffById @Id", new object[] {id });
+            DataTable data = DataProvider.Instance.ExecuteQuery("USP_GetStaffById @Id", new object[] { id });
 
             foreach (DataRow item in data.Rows)
                 staff = new Staff(item);
@@ -57,6 +57,20 @@ namespace DAO
             return result > 0;
         }
 
+        //Hàm thêm nhân viên vào csdl
+        public bool InsertStaff(Staff staff)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_InsertStaff @name , @avatar , @sex , @dateOfBirth , @address , @phone , @maritalStatus , @type , @admin", 
+                new object[] {staff.Name, staff.Avatar, staff.Sex, staff.DateOfBirth, staff.Address, staff.Phone, staff.MaritalStatus, staff.Type, staff.Admin });
+            return result > 0;
+        }
+
+        //Xóa 1 nhân viên 
+        public bool DeleteStaff(int id)
+        {
+            int result = DataProvider.Instance.ExecuteNonQuery("USP_DeleteStaff @id", new object[] { id});
+            return result > 0;
+        }
 
     }
 }

@@ -26,7 +26,6 @@ namespace BUS
             return StaffRepository.Instance.LoadStaffList();
         }
 
-
         // Lấy thông tin nhân viên qua id từ DAO
         public Staff GetStaffById(int id)
         {
@@ -34,10 +33,28 @@ namespace BUS
         }
 
         // Sửa thông tin nhân viên
-        public Boolean EditStaffById(Staff staff)
+        public bool EditStaffById(Staff staff)
         {
             return StaffRepository.Instance.UpdateStaffById(staff);
         }
+
+        // Thêm nhân viên
+        public bool AddStaff(Staff staff)
+        {
+            return StaffRepository.Instance.InsertStaff(staff);
+        }
+
+        // Xóa tài khoản và nhân viên
+        public bool DeleteAccountAndStaff(int id)
+        {
+            //phải xóa account trc
+            if (AccountRepository.Instance.DeleteAccount(id))
+                if (StaffRepository.Instance.DeleteStaff(id))
+                    return true;
+            return false;
+        }
+
+        
 
 
     }
