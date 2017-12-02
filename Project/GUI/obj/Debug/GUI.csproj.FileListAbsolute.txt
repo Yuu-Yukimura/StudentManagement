@@ -29,3 +29,8 @@ D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.AddA
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.AddStaffGUI.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.AddSubjectGUI.resources
 D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.AddClassGUI.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.ClassRegistrationGUI.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.UserControls.ucMainList.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.ClassCancelGUI.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.UserControls.ucMainDebt.resources
+D:\Projects\GitHub\Yuu-Yukimura\StudentManagement\Project\GUI\obj\Debug\GUI.ViewDebtInfoGUI.resources

@@ -88,9 +88,10 @@ namespace GUI
                 cbSubject.Items.Add(subject);
             }
 
-            //cbSubject.Text = cbSubject.Items[0].ToString();
-            
-           
+            if (cbSubject.Items.Count > 0)
+                cbStaff.SelectedIndex = 0;
+
+
         }
 
         // load nhân viên
@@ -108,8 +109,8 @@ namespace GUI
                     cbStaff.Items.Add(staff);
                 }
             }
-
-            //cbStaff.Text = cbStaff.Items[0].ToString();
+            if(cbStaff.Items.Count > 0)
+                cbStaff.SelectedIndex = 0;
             
         }
 

@@ -43,6 +43,20 @@ namespace BUS
             return ClassRepository.Instance.LoadSubjectStaffNameByClass();
         }
 
+        public DataTable GetIDNameClass()
+        {
+            return ClassRepository.Instance.LoadIDNameClassWhenStatusIsReady();
+        }
+
+        public List<Class> GetListClassByStatus(string status)
+        {
+            return ClassRepository.Instance.LoadListClassByStatus(status);
+        }
+
+        public DataTable GetListClassStudentRegistration(int idStudent)
+        {
+            return ClassRepository.Instance.LoadClassStudentRegistration(idStudent);
+        }
 
     }
 }

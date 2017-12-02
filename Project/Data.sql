@@ -80,7 +80,7 @@ CREATE TABLE Debt
 	-- FOREIGN
 	FOREIGN KEY (IDStudent) REFERENCES dbo.Student(ID)
 )
-GO
+GO//
 
 -- 5.bảng chi tiết nợ
 CREATE TABLE DebtInfo
@@ -153,6 +153,16 @@ CREATE TABLE Result
 )
 GO
 
+-- 10.Bảng thanh toán nơ
+CREATE TABLE Pay
+(
+	-- INFO
+	ID INT PRIMARY KEY IDENTITY,
+	IDStudent INT NOT NULL,
+	IDDebt INT NOT NULL,
+	DatetimePay DATETIME NOT NULL,
+	MoneyPay MONEY NOT NULL
+)
 
 --
 -- THÊM RECORD
@@ -592,10 +602,148 @@ BEGIN
 END
 GO
 
+-- Thêm ClassInfo
+CREATE PROC USP_InsertClassInfo
+@idStudent INT, @idClass INT
+AS
+BEGIN
+	INSERT dbo.ClassInfo (IDClass, IDStudent)
+				   VALUES(@idClass, @idStudent)
+END
+GO
+
+-- Ktr sinh viên có trong lớp học không ?
+CREATE PROC USP_CheckStudentInClass
+@idStudent INT, @idClass INT
+AS
+BEGIN
+	SELECT * FROM ClassInfo WHERE IDStudent = @idStudent AND IDClass = @idClass
+END
+GO
+
+-- LẤy thông tin lớp trong tình trạng đang mở
+CREATE PROC USP_LoadIDNameMoneyStatusClassWhenReady
+AS
+BEGIN
+	SELECT Class.ID AS [Mã], Class.Name AS [Tên lớp], Subject.Money AS [Giá tiền] 
+	FROM Class, Subject
+	WHERE Class.IDSubject = Subject.ID AND Class.Status = N'Đang mở'
+END
+GO
+
+-- Lấy thông tin sinh viên trong lớp
+CREATE PROC USP_LoadStudentInClassByIDClass
+@idClass INT
+AS
+BEGIN
+	SELECT Student.ID AS [Mã sinh viên], Student.Name AS [Tên sinh viên]
+	FROM dbo.Student, dbo.Class, dbo.ClassInfo
+	WHERE Class.ID = @idClass AND Class.ID = ClassInfo.IDClass AND Student.ID = ClassInfo.IDStudent
+END
+GO
+
+-- Lấy các lớp sinh viên đã đăng ký
+CREATE PROC USP_LoadListClassStudentRegistration
+@idStudent INT
+AS
+BEGIN
+	SELECT Class.ID AS [Mã lớp], Class.Name AS [Tên Lớp], Subject.Name AS [Tên môn], Staff.Name AS [Tên giảng viên]
+	FROM dbo.Class, dbo.Student, dbo.Staff, dbo.Subject, dbo.ClassInfo
+	WHERE ClassInfo.IDStudent = Student.ID AND ClassInfo.IDClass = Class.ID AND Class.IDStaff = Staff.ID AND Class.IDSubject = Subject.ID AND Student.ID = @idStudent
+END
+GO
+
+-- Xóa một sinh viên ra khỏi 1 lớp
+CREATE PROC USP_DeleteStudentInClass
+@idStudent INT, @idClass INT
+AS
+BEGIN
+	DELETE dbo.ClassInfo
+	WHERE IDClass = @idClass AND IDStudent = @idStudent
+END
+GO
+
+-- Load list debt
+CREATE PROC USP_LoadListDebt
+AS
+BEGIN
+	SELECT Debt.ID AS [Mã nợ], IDStudent AS [Mã sinh viên], Student.Name AS [Tên sinh viên], Debt.SumOfDebt AS [Tổng nợ], Student.Avatar
+	FROM dbo.Debt, dbo.Student
+	WHERE dbo.Debt.IDStudent = dbo.Student.ID
+END
+GO
+
+-- Thêm nợ 
+CREATE PROC USP_InsertDebt
+@idStudent INT
+AS
+BEGIN
+	INSERT dbo.Debt (SumOfDebt)
+			  VALUES(0)
+END
+GO
+
+-- thêm Thông tin nợ
+CREATE PROC USP_InsertDebtInfo
+@idDebt INT, @money MONEY, @date DATETIME
+AS
+BEGIN
+	INSERT dbo.DebtInfo (Money, Date, IDDebt)
+				  VALUES(@money, @date, @idDebt)
+END
+GO
+
+-- Load thông tin nợ
+CREATE PROC USP_LoadListDebtInfoByID
+@idDebt INT
+AS
+BEGIN
+	SELECT ID AS [Số], Money AS [Tiền], Date AS [Thời gian]
+	FROM dbo.DebtInfo
+	WHERE IDDebt = @idDebt
+END
+GO
+
+-- Load Debt by ID
+CREATE PROC USP_LoadDebtByID
+@id INT
+AS
+BEGIN
+	SELECT ID, SumOfDebt, IDStudent FROM dbo.Debt
+	WHERE Id = @id
+END
+GO
+
+-- lấy idDebt bằng IdStudent
+CREATE PROC GetIdDebtByIdStudent
+@idStudent INT
+AS
+BEGIN
+	SELECT Debt.ID 
+	FROM dbo.Student, dbo.Debt
+	WHERE dbo.Debt.IDStudent = dbo.Student.ID AND dbo.Student.ID = @idStudent
+END
+GO
+
+-- Thêm công nợ khi mỗi lần đk học
+CREATE PROC AddMoneyWhenRegistrationByIDDebt
+@idDebt INT, @money MONEY
+AS
+BEGIN
+	UPDATE dbo.Debt SET SumOfDebt = SumOfDebt + @money
+	WHERE ID =  @idDebt
+END
+GO
+
+
 
 INSERT dbo.Staff ( Name,  Sex, DateOfBirth, Address, Phone, MaritalStatus, Type, Administrator)
 		   VALUES(N'Nguyễn Hoàng Quang Duy',  1, '19971010', N'Láng Cát', '0981333793', 1, 0, 1 )
 INSERT dbo.Account (UserName, PassWord)
 		     VALUES('1','1')
 
+SELECT * FROM dbo.ClassInfo WHERE IDClass = 1
+DELETE dbo.ClassInfo WHERE ID = 2
+
+SELECT ID AS [Mã], Name AS [Tên lớp] FROM Class WHERE Status = N'Đang mở'
 

@@ -84,6 +84,7 @@ namespace GUI
 
                     if (StudentService.Instance.AddStudent(student))
                     {
+                        DebtService.Instance.AddDebt();
                         MessageBox.Show("Thêm sinh viên thành công", "Thông báo", MessageBoxButtons.OK);
                     }
                     else

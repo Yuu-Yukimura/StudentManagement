@@ -75,5 +75,18 @@ namespace DAO
             return result > 0;
         }
 
+        //Hàm lấy id và tên sinh viên trong csdl
+        public DataTable LoadIDNameStudent()
+        {
+            return DataProvider.Instance.ExecuteQuery("SELECT ID AS [Mã], Name AS [Tên] FROM Student");
+        }
+
+        //Hàm lấy id và tên sinh viên trong lớp qua idclass
+        public DataTable LoadIDNameStudentInClassByIDClass(int idClass)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_LoadStudentInClassByIDClass @idClass", 
+                new object[] {idClass });
+        }
+
     }
 }

@@ -46,8 +46,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountRepository.cs" />
+    <Compile Include="ClassInfoRepository.cs" />
     <Compile Include="ClassRepository.cs" />
     <Compile Include="DataProvider.cs" />
+    <Compile Include="DebtInfoRepository.cs" />
+    <Compile Include="DebtRepository.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffRepository.cs" />

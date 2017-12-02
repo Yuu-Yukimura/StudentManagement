@@ -47,5 +47,33 @@ namespace DAO
             return DataProvider.Instance.ExecuteQuery("USP_LoadSubjectStaffNameByClass");
         }
 
+        public DataTable LoadIDNameClassWhenStatusIsReady()
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_LoadIDNameMoneyStatusClassWhenReady");
+        }
+
+        public List<Class> LoadListClassByStatus(string status)
+        {
+            List<Class> listClass = new List<Class>();
+
+            DataTable data = DataProvider.Instance.ExecuteQuery("SELECT * FROM dbo.Class WHERE Status = N'"+status+"'");
+
+            foreach (DataRow item in data.Rows)
+            {
+                Class classStudent = new Class(item);
+                listClass.Add(classStudent);
+            }
+
+            return listClass;
+        }
+
+        public DataTable LoadClassStudentRegistration(int idStudent)
+        {
+            return DataProvider.Instance.ExecuteQuery("USP_LoadListClassStudentRegistration @idStudent"
+                ,new object[] {idStudent });
+        }
+
+
+
     }
 }

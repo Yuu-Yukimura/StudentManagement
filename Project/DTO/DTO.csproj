@@ -47,6 +47,9 @@
   <ItemGroup>
     <Compile Include="Account.cs" />
     <Compile Include="Class.cs" />
+    <Compile Include="ClassInfo.cs" />
+    <Compile Include="Debt.cs" />
+    <Compile Include="DebtInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Staff.cs" />

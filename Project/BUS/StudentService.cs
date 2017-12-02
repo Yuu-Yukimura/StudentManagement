@@ -2,6 +2,7 @@
 using DTO;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -48,6 +49,17 @@ namespace BUS
         public bool DeleteStudent(int id)
         {
             return StudentRepository.Instance.DeleteStudent(id);
+        }
+
+        //Lấy id và name sinh viên
+        public DataTable GetIDNameStudent()
+        {
+            return StudentRepository.Instance.LoadIDNameStudent();
+        }
+
+        public DataTable GetIDNameStudentInClassByIDClass(int idClass)
+        {
+            return StudentRepository.Instance.LoadIDNameStudentInClassByIDClass(idClass);
         }
     }
 }

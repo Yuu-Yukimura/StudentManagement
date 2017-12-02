@@ -81,11 +81,29 @@
     <Compile Include="AddSubjectGUI.Designer.cs">
       <DependentUpon>AddSubjectGUI.cs</DependentUpon>
     </Compile>
+    <Compile Include="ClassCancelGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassCancelGUI.Designer.cs">
+      <DependentUpon>ClassCancelGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClassRegistrationGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClassRegistrationGUI.Designer.cs">
+      <DependentUpon>ClassRegistrationGUI.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainGUI.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="MainGUI.Designer.cs">
       <DependentUpon>MainGUI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ViewDebtInfoGUI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ViewDebtInfoGUI.Designer.cs">
+      <DependentUpon>ViewDebtInfoGUI.cs</DependentUpon>
     </Compile>
     <Compile Include="ViewStaffGUI.cs">
       <SubType>Form</SubType>
@@ -158,14 +176,29 @@
     <EmbeddedResource Include="AddSubjectGUI.resx">
       <DependentUpon>AddSubjectGUI.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="ClassCancelGUI.resx">
+      <DependentUpon>ClassCancelGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClassRegistrationGUI.resx">
+      <DependentUpon>ClassRegistrationGUI.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainGUI.resx">
       <DependentUpon>MainGUI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucMainDebt.resx">
+      <DependentUpon>ucMainDebt.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMainHome.resx">
       <DependentUpon>ucMainHome.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\ucMainList.resx">
+      <DependentUpon>ucMainList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UserControls\ucMainStaff.resx">
       <DependentUpon>ucMainStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ViewDebtInfoGUI.resx">
+      <DependentUpon>ViewDebtInfoGUI.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ViewStaffGUI.resx">
       <DependentUpon>ViewStaffGUI.cs</DependentUpon>

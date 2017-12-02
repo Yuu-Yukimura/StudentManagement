@@ -46,7 +46,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AccountService.cs" />
+    <Compile Include="ClassInfoService.cs" />
     <Compile Include="ClassService.cs" />
+    <Compile Include="DebtInfoService.cs" />
+    <Compile Include="DebtService.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StaffService.cs" />
